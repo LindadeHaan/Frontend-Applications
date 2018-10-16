@@ -1,4 +1,4 @@
-# Polymer App Toolbox - Starter Kit
+<!-- # Polymer App Toolbox - Starter Kit
 
 [![Build Status](https://travis-ci.org/Polymer/polymer-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/polymer-starter-kit)
 
@@ -83,10 +83,77 @@ Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-
 
 ---
 
-Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md).
+Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md). -->
 
 # README.md
 
+Install the risico-app
+To install the risico you have to follow a few steps:
+
+You need to change directory in your terminal first to the folder where you want to install everything. Use cd in your terminal to get to the place where you want to install on you computer.  
+Example: cd folder_name
+
+To clone the repository:
+
+```js
+git clone https://github.com/LindadeHaan/risico-app  
+cd risico-app  
+npm install
+```
+
+Start server:
+```js
+node server.js
+```
+##### package.json
+To make a package.json file you have to follow a few steps in your terminal:
+
+```js
+npm init
+```
+After npm init you just have to fill in what your terminal requires. In your package.json file you can see which packages you already installed and which packages you still have to install.
+
+
 ## Process
 
-##### Monday october 18
+##### Monday october 8
+The first day of the project the client came to do a presentation about the organisation.
+We also get to know a little about the assignment we were about to get.
+
+In the afternoon we went to see the neighbourhood with all of the students.
+
+##### Tuesday october 9
+Today there were three speakers who were telling about the three biggest frameworks: `React`, `Vue.js` and `Angular.js`.
+
+After the speakers were done explaining and promoting the frameworks we had to do some research these frameworks and other frameworks.
+
+We had a bootcamp from one of our teachers about the stuff we learned until now. It was a refrehment!
+
+At the end of the day we had to give the teacher a top three of frameworks we want to use.
+
+##### Wednesday october 10
+Today we get to hear the framework we have to work with for two weeks.
+
+The client came by again to show more information and data we can use to make the assignment we got.
+
+I've got the framework `Polymer`.
+For the rest of the day I was researching the framework even more and following tutorials to understand the framework.
+
+We also had a JavaScript bootcamp from one of the teachers.
+
+##### Thursday october 11
+I was still researching the framework I got. It was hard to find a good documentation because not many people use the framework `Polymer`.
+Eventually we found a starter-kit.
+
+I worked together with other people who had to work with the framework `Polymer`. We really helped each other.
+
+##### Friday october 12
+Beginning to understand the framework a little bit more everytime. We found a tutorial to follow to understand the `selected` element in `Polymer`.
+
+##### Monday october 15
+Today the client came with on emergency worker who could be using the product we were making and there were two emergency workers that already use the existing app, but that does not function properly.
+
+It was very useful to hear what emergency workers want in tool they use at work.
+
+##### Tuesday october 16
+Made several pages and links to them. Added all the forms.

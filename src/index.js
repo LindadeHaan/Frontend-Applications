@@ -67,12 +67,21 @@ class MyApp extends PolymerElement {
           text-decoration: none;
           color: var(--app-secondary-color);
           line-height: 40px;
-          border-bottom: solid 1px rgb(140, 140, 140);
         }
 
         .drawer-list a.iron-selected {
           color: black;
           font-weight: bold;
+          width: auto;
+          background: rgba(200, 200, 200, 0.7);
+        }
+
+        .drawer-list a:focus {
+
+        }
+
+        .iron-selected {
+          width: 100%;
         }
 
         .drawer-list a:hover {
@@ -93,9 +102,13 @@ class MyApp extends PolymerElement {
           <app-toolbar>Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
             <a name="home" href="[[rootPath]]home">Home</a>
-            <a name="stap1" href="[[rootPath]]stap1">Stap 1</a>
-            <a name="stap2" href="[[rootPath]]stap2">Stap 2</a>
-            <a name="stap3" href="[[rootPath]]stap3">Stap 3</a>
+            <a name="stap1" href="[[rootPath]]stap1">Algemeen</a>
+            <a name="stap2" href="[[rootPath]]stap2">Werk & Opleiding</a>
+            <a name="stap3" href="[[rootPath]]stap3">Huisvesting</a>
+            <a name="stap4" href="[[rootPath]]stap4">Huiselijke Relaties</a>
+            <a name="stap5" href="[[rootPath]]stap5">Geestelijke Gezondheid</a>
+            <a name="stap6" href="[[rootPath]]stap6">Maatschappelijke Participatie</a>
+            <a name="stap7" href="[[rootPath]]stap7">Justitie</a>
           </iron-selector>
         </app-drawer>
 
@@ -114,6 +127,10 @@ class MyApp extends PolymerElement {
             <my-stap1 name="stap1"></my-stap1>
             <my-stap2 name="stap2"></my-stap2>
             <my-stap3 name="stap3"></my-stap3>
+            <my-stap4 name="stap4"></my-stap4>
+            <my-stap5 name="stap5"></my-stap5>
+            <my-stap6 name="stap6"></my-stap6>
+            <my-stap7 name="stap7"></my-stap7>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -146,7 +163,7 @@ class MyApp extends PolymerElement {
      // Show 'home' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = 'home';
-    } else if (['home', 'stap1', 'stap2', 'stap3'].indexOf(page) !== -1) {
+    } else if (['home', 'stap1', 'stap2', 'stap3', 'stap4', 'stap5', 'stap6', 'stap7'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -176,9 +193,21 @@ class MyApp extends PolymerElement {
       case 'stap3':
         import('./views/my-stap3.js');
         break;
-      case 'view404':
-        import('./views/my-view404.js');
-        break;
+        case 'stap4':
+          import('./views/my-stap4.js');
+          break;
+        case 'stap5':
+          import('./views/my-stap5.js');
+          break;
+        case 'stap6':
+          import('./views/my-stap6.js');
+          break;
+        case 'stap7':
+          import('./views/my-stap7.js');
+          break;
+        case 'view404':
+          import('./views/my-view404.js');
+          break;
     }
   }
 }

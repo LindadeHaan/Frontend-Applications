@@ -13,14 +13,6 @@ import '../styles/shared-styles.js';
 import '@polymer/iron-dropdown/iron-dropdown.js';
 import '@polymer/iron-form/iron-form.js';
 import '../components/my-arrows.js';
-import '../components/vaadin-dropdown-menu.js';
-// import '../components/vaadin-dropdown-menu-overlay.js';
-// import '../components/vaadin-dropdown-menu-text-field.js';
-// import '../styles/vaadin-dropdown-menu-styles.js';
-import '../styles/app-drawer.js';
-import '../styles/app-toolbar.js';
-
-// import '@vaadin/vaadin-dropdown-menu/vaadin-dropdown-menu.js';
 
 class Stap1 extends PolymerElement {
   static get template() {
@@ -36,82 +28,97 @@ class Stap1 extends PolymerElement {
   display: inline-block;
 }
 
-iron-dropdown {
-  border: 1px solid gray;
-  background: white;
-  font-size: 2em;
-}
-
-.column {
-  column-count: 3;
-  column-width: 33%;
-}
 h4:first-of-type {
   margin-top: 0;
 }
 
       </style>
 
-      <div class="card">
-        <!-- <div class="circle">2</div> -->
-        <h1>Stap 1</h1>
-        <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen
-        op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen
-        vallen in dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
-        <p></p>
-
-        <!-- <div class="column"> -->
-
-        <form>
-
-        <h4>Gegevens Kind</h4>
-
-    <label>First Name
-    <input placeholder="Jane"></label>
-
-    <label>Last Name
-    <input placeholder="Doe"></label>
-
-    <label>Email</label>
-    <input placeholder="jane.doe@example.com">
-
-    <label slot="label">Leeftijd
-    <input class="full-width" type="number"></label>
-
-
-</form>
-
-<!-- </div> -->
-
-<my-prev-arrow></my-prev-arrow>
-<my-next-arrow></my-next-arrow>
-
-        </div>
-
-<!-- stap/card 2 -->
-
-<div class="card">
+    <div class="card">
   <!-- <div class="circle">2</div> -->
-  <h1>Stap 1</h1>
-  <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen
-  op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen
-  vallen in dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
-  <p></p>
+  <h1>Algemeen</h1>
+<!--  <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen vallen in
+    dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
+  <p></p> -->
 
-  <vaadin-dropdown-menu label="Label" placeholder="Placeholder">
-  <template>
-    <vaadin-list-box>
-      <vaadin-item value="1">Option one</vaadin-item>
-      <vaadin-item value="2">Option two</vaadin-item>
-      <vaadin-item value="3">Option three</vaadin-item>
-      <vaadin-item value="4">Option four</vaadin-item>
-    </vaadin-list-box>
-  </template>
-</vaadin-dropdown-menu>
-<!-- <my-prev-arrow></my-prev-arrow>
-<my-next-arrow></my-next-arrow> -->
+  <form>
+    <fieldset>
+      <!-- <legend>Algemeen</legend> -->
 
-  </div>
+      <div class="dropdowns">
+        <label>Geslacht</label>
+        <select name="geslacht">
+        <option value="man">Man</option>
+        <option value="vrouw">Vrouw</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Leeftijd van het kind</label>
+        <select name="leeftijd">
+        <option value="">0 tot 4 jaar</option>
+        <option value="">4 tot 8 jaar</option>
+        <option value="">8 tot 12 jaar</option>
+        <option value="">12 tot 16 jaar</option>
+        <option value="">16 tot 18 jaar</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Leeftijd moeder bij geboorte</label>
+        <select name="leeftijd-moeder-geboorte">
+        <option value="">jonger dan 20 jaar</option>
+        <option value="">20 t0t 25 jaar</option>
+        <option value="">25 tot 30 jaar</option>
+        <option value="">30 tot 35 jaar</option>
+        <option value="">35 tot 40 jaar</option>
+        <option value="">40 jaar en ouder</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Leeftijd vader bij geboorte</label>
+        <select name="leeftijd-vader-geboorte">
+        <option value="">jonger dan 25 jaar</option>
+        <option value="">25 tot 30 jaar</option>
+        <option value="">30 tot 35 jaar</option>
+        <option value="">35 tot 40 jaar</option>
+        <option value="">40 jaar en ouder</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Leeftijdsverschil tussen ouders</label>
+        <select name="leeftijdsverschil">
+        <option value="">Minder dan 5 jaar</option>
+        <option value="">Meer dan 5 jaar</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Herkomst van de ouders</label>
+        <select name="herkomst">
+        <option value="">Beide ouders Nederlands</option>
+        <option value="">Beide ouders niet Nederlands</option>
+        <option value="">Eén van de ouders Nederlands en de ander niet Nederlands</option>
+        </select>
+      </div>
+
+      <div class="dropdowns">
+        <label>Hulptraject</label>
+        <select name="hulptraject">
+        <option value="">Geen jeugdhelp zonder verblijf gehad</option>
+        <option value="">Jeugdhulp zonder verblijf gehad</option>
+        </select>
+      </div>
+
+    </fieldset>
+  </form>
+
+  <!-- <my-prev-arrow></my-prev-arrow>
+  <my-next-arrow></my-next-arrow> -->
+
+</div>
 
 
     `;

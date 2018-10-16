@@ -84,3 +84,9 @@ Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-
 ---
 
 Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md).
+
+# README.md
+
+## Process
+
+##### Monday october 18

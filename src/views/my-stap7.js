@@ -11,7 +11,7 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 
-class Stap3 extends PolymerElement {
+class Stap7 extends PolymerElement {
   static get template() {
     return html`
       <style include="shared-styles">
@@ -24,35 +24,44 @@ class Stap3 extends PolymerElement {
 
       <div class="card">
         <!-- <div class="circle">3</div> -->
-        <h1>Huisvesting</h1>
+        <h1>Justitie</h1>
 
-        <!-- stap/card 3 -->
+        <!-- stap/card 5 -->
 
           <!-- <div class="circle">2</div> -->
           <form>
             <fieldset>
-            <!--  <legend>Huisvesting</legend> -->
+              <!-- <legend>Justitie</legend> -->
 
               <div class="dropdowns">
-                <label>Soort woning</label>
-                <select name="house">
-                <option value="">Eigen woning</option>
-                <option value="">Huurwoning met huurtoeslag</option>
-                <option value="">Huurwoning zonder huurtoeslag</option>
-                <option value="">Onbekend</option>
+                <label>Kind in het verleden verdacht geweest van een delict</label>
+                <select name="crime-child">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
                 </select>
               </div>
 
               <div class="dropdowns">
-                <label>Type huishouden</label>
-                <select name="type-household">
-                <option value="">Eenouderhuishouden</option>
-                <option value="">Gehuwd paar met kinderen</option>
-                <option value="">Eenpersoonshuishouden</option>
-                <option value="">Niet-gehuwd paar met kinderen</option>
-                <option value="">Institutioneel huishouden</option>
-                <option value="">Overig huishouden</option>
-                <option value="">Onbekend huishouden</option>
+                <label>Kind in aanraking geweest met bureau HALT voor een delict</label>
+                <select name="child-HALT">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Vader verdacht van delict in het verleden</label>
+                <select name="crime-father">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Moeder verdacht van delict in het verleden</label>
+                <select name="crime-mother">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
                 </select>
               </div>
 
@@ -67,4 +76,4 @@ class Stap3 extends PolymerElement {
   }
 }
 
-window.customElements.define('my-stap3', Stap3);
+window.customElements.define('my-stap7', Stap7);

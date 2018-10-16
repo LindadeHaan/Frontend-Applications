@@ -24,9 +24,83 @@ class Stap2 extends PolymerElement {
 
       <div class="card">
         <!-- <div class="circle">3</div> -->
-        <h1>Stap 2</h1>
-        <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
-        <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
+        <h1>Werk & Opleiding</h1>
+        <!-- stap/card 2 -->
+
+          <!-- <div class="circle">2</div> -->
+          <form>
+            <fieldset>
+              <!-- <legend>Werk & Opleiding</legend> -->
+
+              <div class="dropdowns">
+                <label>Soort onderwijs van het kind</label>
+                <select name="kindofeducation">
+                <option value="">Regulier onderwijs</option>
+                <option value="">Niet-regulier onderwijs</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Huidig onderwijsniveau kind</label>
+                <select name="education-level">
+                <option value="">Basisonderijs</option>
+                <option value="">Vmbo b/k, mbo 1 of mbo 2</option>
+                <option value="">Vmbo g/t, mbo 3 of mbo 4</option>
+                <option value="">Havo onderbouw, Havo bovenbouw of Hbo bachelor</option>
+                <option value="">Vwo of Wo bachelor</option>
+                <option value="">Onderwijs onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Verandering in het voortgezet onderwijsniveau</label>
+                <select name="change-of-education">
+                <option value="">Opschalen of gelijkblijvend</option>
+                <option value="">Opschalen</option>
+                <option value="">Afschalen</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Voortijdig schoolverlater</label>
+                <select name="early-school-leaver">
+                <option value="">Door in onderijs</option>
+                <option value="">Onbekend</option>
+                <option value="">Niet van toepassing</option>
+                <option value="">Uit onderwijs met startkwalificatie</option>
+                <option value="">Voortijdig schoolverlaten</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Hoogst behaalde onderwijsniveau vader</label>
+                <select name="education-level-father">
+                <option value="">Vmbo b/k, mbo 1 of mbo 2</option>
+                <option value="">Vmbo g/t, mbo 3 of mbo 4</option>
+                <option value="">Havo onderbouw, Havo bovenbouw, Hbo bachelor of Hbo master</option>
+                <option value="">Vwo, Wo bachelor of Wo master</option>
+                <option value="">Onderwijs onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Hoogst behaalde onderwijsniveau moeder</label>
+                <select name="education-level-mother">
+                <option value="">Vmbo b/k, mbo 1 of mbo 2</option>
+                <option value="">Vmbo g/t, mbo 3 of mbo 4</option>
+                <option value="">Havo onderbouw, Havo bovenbouw, Hbo bachelor of Hbo master</option>
+                <option value="">Vwo, Wo bachelor of Wo master</option>
+                <option value="">Onderwijs onbekend</option>
+                </select>
+              </div>
+
+            </fieldset>
+          </form>
+
+        <!-- <my-prev-arrow></my-prev-arrow>
+        <my-next-arrow></my-next-arrow> -->
+
       </div>
     `;
   }

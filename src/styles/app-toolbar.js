@@ -91,6 +91,7 @@ Polymer({
       :host ::slotted([main-title]),
       :host ::slotted([condensed-title]) {
         pointer-events: none;
+        margin-left: 40px;
         @apply --layout-flex;
       }
 

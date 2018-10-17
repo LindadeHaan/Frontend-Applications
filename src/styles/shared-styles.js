@@ -15,7 +15,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
   <template>
     <style>
       .card {
-        margin: 24px;
+        margin: 24px 40px;
         padding: 16px;
         color: #757575;
         background-color: #fff;
@@ -67,18 +67,14 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         /* float: left; */
       }
 
-      /* .algemeen-form {
-        column-count: 3;
-        column-width: 33%;
-      } */
-
       /* DROPDOWN  */
       select {
-        width: 50%;
+        width: 45%;
+        border: solid 1px rgba(39, 201, 255);
         height: 35px;
-        font-size: 12px;
+        font-size: 14px;
         padding: 5px;
-        background: rgb(220, 220, 220);
+        background: #fff;
         float: right;
         margin-right: 20px;
         font-family: "Exo", sans-serif;

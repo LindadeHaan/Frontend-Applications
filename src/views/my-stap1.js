@@ -51,9 +51,6 @@ h4:first-of-type {
 
     `;
   }
-  _openDropdown() {
-    this.$.dropdown.open();
-  }
 }
 
 

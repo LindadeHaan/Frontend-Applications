@@ -13,6 +13,7 @@ import '../styles/shared-styles.js';
 import '@polymer/iron-dropdown/iron-dropdown.js';
 import '@polymer/iron-form/iron-form.js';
 import '../components/my-arrows.js';
+import '../components/my-general.js';
 
 class Stap1 extends PolymerElement {
   static get template() {
@@ -37,82 +38,9 @@ h4:first-of-type {
     <div class="card">
   <!-- <div class="circle">2</div> -->
   <h1>Algemeen</h1>
-<!--  <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen vallen in
-    dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
-  <p></p> -->
 
-  <form>
-    <fieldset>
-      <!-- <legend>Algemeen</legend> -->
-
-      <div class="dropdowns">
-        <label>Geslacht</label>
-        <select name="sex">
-        <option value="man">Man</option>
-        <option value="vrouw">Vrouw</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Leeftijd van het kind</label>
-        <select name="age">
-        <option value="">0 tot 4 jaar</option>
-        <option value="">4 tot 8 jaar</option>
-        <option value="">8 tot 12 jaar</option>
-        <option value="">12 tot 16 jaar</option>
-        <option value="">16 tot 18 jaar</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Leeftijd moeder bij geboorte</label>
-        <select name="age-mom-birth">
-        <option value="">jonger dan 20 jaar</option>
-        <option value="">20 t0t 25 jaar</option>
-        <option value="">25 tot 30 jaar</option>
-        <option value="">30 tot 35 jaar</option>
-        <option value="">35 tot 40 jaar</option>
-        <option value="">40 jaar en ouder</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Leeftijd vader bij geboorte</label>
-        <select name="age-father-birth">
-        <option value="">jonger dan 25 jaar</option>
-        <option value="">25 tot 30 jaar</option>
-        <option value="">30 tot 35 jaar</option>
-        <option value="">35 tot 40 jaar</option>
-        <option value="">40 jaar en ouder</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Leeftijdsverschil tussen ouders</label>
-        <select name="age-difference">
-        <option value="">Minder dan 5 jaar</option>
-        <option value="">Meer dan 5 jaar</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Herkomst van de ouders</label>
-        <select name="origin">
-        <option value="">Beide ouders Nederlands</option>
-        <option value="">Beide ouders niet Nederlands</option>
-        <option value="">Eén van de ouders Nederlands en de ander niet Nederlands</option>
-        </select>
-      </div>
-
-      <div class="dropdowns">
-        <label>Hulptraject</label>
-        <select name="help">
-        <option value="">Geen jeugdhelp zonder verblijf gehad</option>
-        <option value="">Jeugdhulp zonder verblijf gehad</option>
-        </select>
-      </div>
-
-    </fieldset>
+<form>
+  <my-general></my-general>
   </form>
 
   <!-- <my-prev-arrow></my-prev-arrow>

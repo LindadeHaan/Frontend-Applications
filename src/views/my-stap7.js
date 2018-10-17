@@ -10,6 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
+import '../components/my-justice.js';
 
 class Stap7 extends PolymerElement {
   static get template() {
@@ -23,49 +24,11 @@ class Stap7 extends PolymerElement {
       </style>
 
       <div class="card">
-        <!-- <div class="circle">3</div> -->
         <h1>Justitie</h1>
 
         <!-- stap/card 5 -->
-
-          <!-- <div class="circle">2</div> -->
           <form>
-            <fieldset>
-              <!-- <legend>Justitie</legend> -->
-
-              <div class="dropdowns">
-                <label>Kind in het verleden verdacht geweest van een delict</label>
-                <select name="crime-child">
-                <option value="">Nee</option>
-                <option value="">Ja</option>
-                </select>
-              </div>
-
-              <div class="dropdowns">
-                <label>Kind in aanraking geweest met bureau HALT voor een delict</label>
-                <select name="child-HALT">
-                <option value="">Nee</option>
-                <option value="">Ja</option>
-                </select>
-              </div>
-
-              <div class="dropdowns">
-                <label>Vader verdacht van delict in het verleden</label>
-                <select name="crime-father">
-                <option value="">Nee</option>
-                <option value="">Ja</option>
-                </select>
-              </div>
-
-              <div class="dropdowns">
-                <label>Moeder verdacht van delict in het verleden</label>
-                <select name="crime-mother">
-                <option value="">Nee</option>
-                <option value="">Ja</option>
-                </select>
-              </div>
-
-            </fieldset>
+            <my-justice></my-justice>
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

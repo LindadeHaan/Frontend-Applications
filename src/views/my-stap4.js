@@ -10,6 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
+import '../components/my-house-relationships.js';
 
 class Stap4 extends PolymerElement {
   static get template() {
@@ -27,21 +28,8 @@ class Stap4 extends PolymerElement {
         <h1>Huiselijke Relaties</h1>
 
         <!-- stap/card 4 -->
-
-          <!-- <div class="circle">2</div> -->
           <form>
-            <fieldset>
-              <!-- <legend>Huiselijke relaties</legend> -->
-
-              <div class="dropdowns">
-                <label>Ouders gescheiden</label>
-                <select name="divorced">
-                <option value="">Ja</option>
-                <option value="">Nee</option>
-                </select>
-              </div>
-
-            </fieldset>
+            <my-house-relationships></my-house-relationships>
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

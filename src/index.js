@@ -25,7 +25,6 @@ import './components/my-icons.js';
 import './styles/app-drawer.js';
 import './styles/app-toolbar.js';
 
-
 // Gesture events like tap and track generated from touch will not be
 // preventable, allowing for better scrolling performance.
 setPassiveTouchGestures(true);
@@ -33,6 +32,63 @@ setPassiveTouchGestures(true);
 // Set Polymer's root path to the same value we passed to our service worker
 // in `index.html`.
 setRootPath(MyAppGlobals.rootPath);
+
+
+window.addEventListener("load", () => {
+  console.log("All resources finished loading!");
+
+  const data = window.localStorage.getItem('data') || []
+
+  if (!data.length > 0) {
+	  const optionData = [
+		  {
+			  'id' : '1',
+			  'general' : {
+				  'sex': '',
+          'age': '',
+          'age-mother-birth': '',
+          'age-father-birth': '',
+          'age-difference': '',
+          'origin': '',
+          'help': ''
+			  },
+        'work-education' : {
+          'kind-of-education': '',
+          'education-level': '',
+          'change-of-education': '',
+          'early-school-leaver': '',
+          'education-level-father': '',
+          'education-level-mother': ''
+        },
+        'housing' : {
+          'house': '',
+          'type-household': ''
+        },
+        'house-relationships' : {
+          'divorced': ''
+        },
+        'mental-health' : {
+          'victim': ''
+        },
+        'participation' : {
+          'social-participation-father': '',
+          'social-participation-mother': '',
+          'economic-status-father': '',
+          'economic-status-mother': ''
+        },
+        'justice' : {
+          'crime-child': '',
+          'child-HALT': '',
+          'crime-father': '',
+          'crime-mother': ''
+        }
+		  }
+	  ]
+
+    window.localStorage.setItem('data', JSON.stringify(optionData))
+  }
+
+});
 
 class MyApp extends PolymerElement {
   static get template() {

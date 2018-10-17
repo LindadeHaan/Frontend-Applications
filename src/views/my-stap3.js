@@ -10,6 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
+import '../components/my-housing.js';
 
 class Stap3 extends PolymerElement {
   static get template() {
@@ -23,40 +24,11 @@ class Stap3 extends PolymerElement {
       </style>
 
       <div class="card">
-        <!-- <div class="circle">3</div> -->
         <h1>Huisvesting</h1>
 
         <!-- stap/card 3 -->
-
-          <!-- <div class="circle">2</div> -->
           <form>
-            <fieldset>
-            <!--  <legend>Huisvesting</legend> -->
-
-              <div class="dropdowns">
-                <label>Soort woning</label>
-                <select name="house">
-                <option value="">Eigen woning</option>
-                <option value="">Huurwoning met huurtoeslag</option>
-                <option value="">Huurwoning zonder huurtoeslag</option>
-                <option value="">Onbekend</option>
-                </select>
-              </div>
-
-              <div class="dropdowns">
-                <label>Type huishouden</label>
-                <select name="type-household">
-                <option value="">Eenouderhuishouden</option>
-                <option value="">Gehuwd paar met kinderen</option>
-                <option value="">Eenpersoonshuishouden</option>
-                <option value="">Niet-gehuwd paar met kinderen</option>
-                <option value="">Institutioneel huishouden</option>
-                <option value="">Overig huishouden</option>
-                <option value="">Onbekend huishouden</option>
-                </select>
-              </div>
-
-            </fieldset>
+            <my-housing></my-housing>
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

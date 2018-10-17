@@ -80,9 +80,8 @@ class GeneralForm extends PolymerElement {
         <div class="dropdowns">
           <label>Hulptraject</label>
           <select name="help" id="help" on-change="onChangeAnswer">
-          <option disabled="disabled" selected="selected">Selecteer</option>
-          <option value="noHelp">Geen jeugdhelp zonder verblijf gehad</option>
-          <option value="yesHelp">Jeugdhulp zonder verblijf gehad</option>
+          <option selected="selected" value="no">Geen jeugdhelp zonder verblijf gehad</option>
+          <option value="yes">Jeugdhulp zonder verblijf gehad</option>
           </select>
         </div>
 

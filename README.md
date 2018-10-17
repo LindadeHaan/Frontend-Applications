@@ -103,7 +103,7 @@ npm install
 
 Start server:
 ```js
-node server.js
+npm start
 ```
 ##### package.json
 To make a package.json file you have to follow a few steps in your terminal:
@@ -130,6 +130,9 @@ After the speakers were done explaining and promoting the frameworks we had to d
 We had a bootcamp from one of our teachers about the stuff we learned until now. It was a refrehment!
 
 At the end of the day we had to give the teacher a top three of frameworks we want to use.
+1. Vue.js;
+2. React;
+3. Polymer
 
 ##### Wednesday october 10
 Today we get to hear the framework we have to work with for two weeks.
@@ -157,3 +160,10 @@ It was very useful to hear what emergency workers want in tool they use at work.
 
 ##### Tuesday october 16
 Made several pages and links to them. Added all the forms.
+
+##### Wednesday october 17
+There was a speaker today (Nienke Dekker). She talked about why to use a framework. (kijk in notitieboek voor aanvulling)
+
+Added localStorage to the app. Chelsea Dekker and Maikel van Veen helped me a lot with this code. I could not figure it out myself. With the help of Chelsea and Maikel I understand the code and how you save the code in you localStorage.
+
+Added a lot of styling and made components of the forms.

@@ -69,7 +69,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
 
       /* DROPDOWN  */
       select {
-        width: 45%;
+        width: 40%;
         border: solid 1px rgba(39, 201, 255);
         height: 35px;
         font-size: 14px;
@@ -87,6 +87,30 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         border: solid 1px rgba(39, 201, 255, 0.4);
       }
 
+      /* select:valid {
+        background: rgb(39, 201, 255);
+      } */
+
+      fieldset {
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
+
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        font-family: "Exo", sans-serif;
+        background: rgba(39, 201, 255, 0.4);
+        border: solid 1px rgba(39, 201, 255, 0.4);
+        }
+
+        button:hover {
+          background: rgb(39, 201, 255);
+          border: solid 1px rgb(39, 201, 255);
+        }
     </style>
   </template>
 </dom-module>`;

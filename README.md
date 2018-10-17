@@ -131,8 +131,8 @@ We had a bootcamp from one of our teachers about the stuff we learned until now.
 
 At the end of the day we had to give the teacher a top three of frameworks we want to use.
 1. Vue.js;
-2. React;
-3. Polymer
+2. React.js;
+3. Polymer.js
 
 ##### Wednesday october 10
 Today we get to hear the framework we have to work with for two weeks.

@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class HouseRelationships extends PolymerElement {
   static get template() {
@@ -30,9 +31,25 @@ class HouseRelationships extends PolymerElement {
     const { options } = target
     const { name: optionName } = target
     const selectedValue = options[target.selectedIndex].value
-    console.log(selectedValue);
 
     setNewLocalStorage(optionName, selectedValue, 'house-relationships')
+
+    if (optionName === 'divorced') {
+      if (selectedValue === 'yes') {
+        setValueToFactor(optionName, 0.27683414)
+      } else {
+        setValueToFactor(optionName, 0)
+      }
+    }
+
+    try {
+      window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+      //triggers an event, which in this case is fake
+      //disPatchEvent triggered het fake event
+      document.dispatchEvent(new Event ('eventLauncher'))
+    } catch (error) {
+      throw new Error (error)
+    }
   }
 
   ready () {

@@ -10,6 +10,8 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
+import { calculateRisk } from './functions/calculateRisk.js';
+import { riskPercentageToWindow } from './functions/riskPercentageToWindow.js';
 // import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/app-header/app-header.js';
@@ -87,6 +89,7 @@ window.addEventListener("load", () => {
 
     window.localStorage.setItem('data', JSON.stringify(optionData))
   }
+  riskPercentageToWindow()
 
 });
 
@@ -152,6 +155,12 @@ class MyApp extends PolymerElement {
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
           <app-toolbar>Menu</app-toolbar>
+<!-- PERCENTAGE -->
+
+<h1 class="risk">[[riskPercentage()]]%</h1>
+
+
+
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
             <a name="home" href="[[rootPath]]home">Home</a>
             <a name="stap1" href="[[rootPath]]stap1">Algemeen</a>
@@ -262,6 +271,33 @@ class MyApp extends PolymerElement {
           break;
     }
   }
+riskPercentage () {
+  try {
+    return calculateRisk(JSON.parse(window.localStorage.getItem('dataFactors')))
+  } catch (error) {
+    throw new Error (error)
+  }
+}
+
+ready() {
+  super.ready()
+    // launch fake event
+    document.addEventListener('eventLauncher', () => {
+      // eerst naar shadowRoot gaan voordat we iets kunnen aanspreken in de Dom: is iets van polymer
+      const shadowDom = this.shadowRoot.querySelector('.risk')
+      try {
+        //retrigger calculation when another option is clicked
+        // percentage weer berekenen
+        const percentageCalculation = calculateRisk(JSON.parse(window.localStorage.getItem('dataFactors')))
+        //add to h1
+        shadowDom.textContent = `${percentageCalculation}%`
+      } catch (error) {
+        throw new Error (error)
+      }
+    })
+}
+
+
 }
 
 window.customElements.define('my-app', MyApp);

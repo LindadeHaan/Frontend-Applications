@@ -31,9 +31,6 @@ class Stap6 extends PolymerElement {
             <my-participation></my-participation>
           </form>
 
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
-
       </div>
     `;
   }

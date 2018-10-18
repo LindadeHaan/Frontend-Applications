@@ -30,9 +30,6 @@ class Stap2 extends PolymerElement {
             <my-work-education></my-work-education>
           </form>
 
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
-
       </div>
     `;
   }

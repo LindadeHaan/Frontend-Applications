@@ -1,3 +1,6 @@
+// Import all the functions and files you need in this particular file.
+//Searches for a Polymer element, because you make an element in this file.
+//You need this to be able to make a component.
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
@@ -6,6 +9,7 @@ import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class GeneralForm extends PolymerElement {
   static get template() {
+    // You can write html
     return html`
 
 <style include="shared-styles">
@@ -90,14 +94,21 @@ class GeneralForm extends PolymerElement {
 `;
 }
 
+//Searching for the value that is similar to the select name.
+//Is called when the answer is changed.
 onChangeAnswer(event) {
-  // alternative: const target = event.target
-  const { target } = event
-  // alternative: const options = event.options
-  const { options } = target
+  //Searches for target in event.
+  const target = event.target
+  // const { target } = event
+  const options = event.options
+  // const { options } = target
+  // This is the target you are searching for.
   const { name: optionName } = target
+  // selectedIndex gets the index number of the option.
+  // selectedIndex of options.
   const selectedValue = options[target.selectedIndex].value
 
+  // Saves changes in local storage.
   setNewLocalStorage(optionName, selectedValue, 'general')
 
 //SEX
@@ -196,7 +207,9 @@ onChangeAnswer(event) {
 
 }
 
+//opzoeken!!!!
 ready () {
+  // super betekent dat er iets overschreven moet worden.
   super.ready ()
 
 const selectNames = [

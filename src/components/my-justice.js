@@ -12,7 +12,6 @@ class Justice extends PolymerElement {
 
     </style>
     <fieldset>
-      <!-- <legend>Justitie</legend> -->
 
       <div class="dropdowns">
         <label>Kind in het verleden verdacht geweest van een delict</label>

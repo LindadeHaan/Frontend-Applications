@@ -28,6 +28,18 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         font-size: 22px;
       }
 
+      h4 {
+        color: #232323;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        color: #232323;
+        margin-top: 10px;
+        font-family: "Open Sans";
+      }
+
       form {
         width: 100%;
       }
@@ -102,6 +114,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         button:hover {
           background: rgb(155, 174, 255);
           border: solid 1px rgb(155, 174, 255);
+          cursor: pointer;
         }
     </style>
   </template>

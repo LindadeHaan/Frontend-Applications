@@ -87,7 +87,7 @@ Looking for our older PSK2 Polycast or migration blog post? See [the previous RE
 
 # README.md
 
-Install the risico-app
+### Install the risico-app
 To install the risico you have to follow a few steps:
 
 You need to change directory in your terminal first to the folder where you want to install everything. Use cd in your terminal to get to the place where you want to install on you computer.  
@@ -112,6 +112,8 @@ To make a package.json file you have to follow a few steps in your terminal:
 npm init
 ```
 After npm init you just have to fill in what your terminal requires. In your package.json file you can see which packages you already installed and which packages you still have to install.
+
+## Concept
 
 
 ## Process
@@ -167,3 +169,7 @@ There was a speaker today (Nienke Dekker). She talked about why to use a framewo
 Added localStorage to the app. Chelsea Dekker and Maikel van Veen helped me a lot with this code. I could not figure it out myself. With the help of Chelsea and Maikel I understand the code and how you save the code in you localStorage.
 
 Added a lot of styling and made components of the forms.
+
+##### Thursday october 18
+Added the formula to get the percentage of the risk.
+With the help of Chelsea (and Maikel) I added the formula to the risico-app. Now the website calculates the risk while you select a value in a dropdown.

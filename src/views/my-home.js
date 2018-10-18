@@ -23,11 +23,17 @@ class Home extends PolymerElement {
       </style>
 
       <div class="card">
-        <!-- <div class="circle">1</div> -->
         <h1>Home</h1>
-        <p>Vragenlijst</p>
         <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen vallen in
             dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
+
+        <h4>Gebruiksaanwijzing</h4>
+        <p>Vul alle vragen in door de juiste opties te selecteren. Er komt dan een percentage aan de linkerkant van de pagina te staan.
+        Dit is een indicatie van het risico op een zware maatregel</p>
+
+        <p>0 - 2%: Laag risico</p>
+        <p>2 - 5%: Middelmatig risico</p>
+        <p>5% en hoger: Hoog risico</p>
 
             <button on-click="resetButton">Reset vragenlijst</button>
       </div>

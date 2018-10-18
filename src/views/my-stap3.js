@@ -31,9 +31,6 @@ class Stap3 extends PolymerElement {
             <my-housing></my-housing>
           </form>
 
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
-
       </div>
     `;
   }

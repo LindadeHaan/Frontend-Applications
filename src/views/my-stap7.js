@@ -31,9 +31,6 @@ class Stap7 extends PolymerElement {
             <my-justice></my-justice>
           </form>
 
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
-
       </div>
     `;
   }

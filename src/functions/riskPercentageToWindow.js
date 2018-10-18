@@ -1,6 +1,7 @@
 export const riskPercentageToWindow = () => {
   const dataFactors = window.localStorage.getItem('dataFactors') || []
 
+  // Set the start of all the selects factor to 0. It changes when an answer is clicked.
   if(!dataFactors.length > 0) {
     window.dataFactors = [
       {
@@ -113,7 +114,7 @@ export const riskPercentageToWindow = () => {
     }
   } else {
     try {
-      //write JS in JSON to window
+      // Write JS in JSON to window
       window.dataFactors = JSON.parse(window.localStorage.getItem('dataFactors'))
     } catch (error) {
       throw new Error (error)

@@ -49,6 +49,7 @@ setRootPath(MyAppGlobals.rootPath);
 window.addEventListener("load", () => {
   console.log("All resources finished loading!");
 
+ //Gets data from data or an empty object.
   const data = window.localStorage.getItem('data') || []
 
   if (!data.length > 0) {
@@ -95,6 +96,7 @@ window.addEventListener("load", () => {
       }
     }]
 
+    // Set data in local storage and makes it a string for the local storage.
     window.localStorage.setItem('data', JSON.stringify(optionData))
   }
   riskPercentageToWindow()

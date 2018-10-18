@@ -24,16 +24,12 @@ class Stap4 extends PolymerElement {
       </style>
 
       <div class="card">
-        <!-- <div class="circle">3</div> -->
         <h1>Huiselijke Relaties</h1>
 
         <!-- stap/card 4 -->
           <form>
             <my-house-relationships></my-house-relationships>
           </form>
-
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
 
       </div>
     `;

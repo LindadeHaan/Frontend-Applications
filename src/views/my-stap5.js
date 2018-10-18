@@ -1,4 +1,4 @@
-/**
+ /**
  * @license
  * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -30,9 +30,6 @@ class Stap5 extends PolymerElement {
           <form>
             <my-mental-health></my-mental-health>
           </form>
-
-        <!-- <my-prev-arrow></my-prev-arrow>
-        <my-next-arrow></my-next-arrow> -->
 
       </div>
     `;

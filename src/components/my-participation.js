@@ -12,7 +12,6 @@ class Participation extends PolymerElement {
 
     </style>
     <fieldset>
-      <!-- <legend>Maatschappelijk participatie</legend> -->
 
       <div class="dropdowns">
         <label>Maatschappelijke participatie van vader</label>

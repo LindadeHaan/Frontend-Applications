@@ -1,4 +1,5 @@
-/**
+ /*
+ *
  * @license
  * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -12,7 +13,6 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import '@polymer/iron-dropdown/iron-dropdown.js';
 import '@polymer/iron-form/iron-form.js';
-import '../components/my-arrows.js';
 import '../components/my-general.js';
 
 class Stap1 extends PolymerElement {
@@ -36,15 +36,11 @@ h4:first-of-type {
       </style>
 
     <div class="card">
-  <!-- <div class="circle">2</div> -->
   <h1>Algemeen</h1>
 
 <form>
   <my-general></my-general>
   </form>
-
-  <!-- <my-prev-arrow></my-prev-arrow>
-  <my-next-arrow></my-next-arrow> -->
 
 </div>
 

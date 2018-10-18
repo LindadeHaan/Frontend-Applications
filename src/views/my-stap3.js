@@ -24,11 +24,48 @@ class Stap3 extends PolymerElement {
       </style>
 
       <div class="card">
+<<<<<<< HEAD
         <h1>Huisvesting</h1>
 
         <!-- stap/card 3 -->
           <form>
             <my-housing></my-housing>
+=======
+        <!-- <div class="circle">3</div> -->
+        <h1>Huisvesting</h1>
+
+        <!-- stap/card 3 -->
+
+          <!-- <div class="circle">2</div> -->
+          <form>
+            <fieldset>
+            <!--  <legend>Huisvesting</legend> -->
+
+              <div class="dropdowns">
+                <label>Soort woning</label>
+                <select name="soort-woining">
+                <option value="">Eigen woning</option>
+                <option value="">Huurwoning met huurtoeslag</option>
+                <option value="">Huurwoning zonder huurtoeslag</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Type huishouden</label>
+                <select name="type-huishouden">
+                <option value="">Eenouderhuishouden</option>
+                <option value="">Gehuwd paar met kinderen</option>
+                <option value="">Eenpersoonshuishouden</option>
+                <option value="">Niet-gehuwd paar met kinderen</option>
+                <option value="">Institutioneel huishouden</option>
+                <option value="">Overig huishouden</option>
+                <option value="">Onbekend huishouden</option>
+                </select>
+              </div>
+
+            </fieldset>
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

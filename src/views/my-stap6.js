@@ -10,7 +10,10 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
+<<<<<<< HEAD
 import '../components/my-participation.js';
+=======
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
 
 class Stap6 extends PolymerElement {
   static get template() {
@@ -24,11 +27,85 @@ class Stap6 extends PolymerElement {
       </style>
 
       <div class="card">
+<<<<<<< HEAD
         <h1>Maatschappelijke Participatie</h1>
 
         <!-- stap/card 5 -->
           <form>
             <my-participation></my-participation>
+=======
+        <!-- <div class="circle">3</div> -->
+        <h1>Maatschappelijke Participatie</h1>
+
+        <!-- stap/card 5 -->
+
+          <!-- <div class="circle">2</div> -->
+          <form>
+            <fieldset>
+              <!-- <legend>Maatschappelijk participatie</legend> -->
+
+              <div class="dropdowns">
+                <label>Maatschappelijke participatie van vader</label>
+                <select name="maatschappelijke-participatie-vader">
+                <option value="">Werkend of overig actief</option>
+                <option value="">Geen werk en niet actief</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Maatschappelijke participatie van moeder</label>
+                <select name="maatschappelijke-participatie-moeder">
+                <option value="">Werkend of overig actief</option>
+                <option value="">Geen werk en niet actief</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Socio economische status van vader</label>
+                <select name="economische-status-vader">
+                <option value="">Bijstandsontvanger</option>
+                <option value="">Arbeidsongeschikte</option>
+                <option value="">Ontvanger overige sociale voorzieningen</option>
+                <option value="">Ontvanger werkloosheidsuitkering</option>
+                <option value="">Ambtenaar</option>
+                <option value="">Directeur groot aandeelhouder</option>
+                <option value="">Werknemer particulier bedrijf</option>
+                <option value="">Zelfstandige</option>
+                <option value="">Student</option>
+                <option value="">Overig actief</option>
+                <option value="">Overig niet actief</option>
+                <option value="">Pensioen</option>
+                <option value="">Vader onbekend</option>
+                <option value="">Zonder inkomen</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Socio economische status van moeder</label>
+                <select name="economische-status-moeder">
+                <option value="">Bijstandsontvanger</option>
+                <option value="">Arbeidsongeschikte</option>
+                <option value="">Ontvanger overige sociale voorzieningen</option>
+                <option value="">Ontvanger werkloosheidsuitkering</option>
+                <option value="">Ambtenaar</option>
+                <option value="">Directeur groot aandeelhouder</option>
+                <option value="">Werknemer particulier bedrijf</option>
+                <option value="">Zelfstandige</option>
+                <option value="">Student</option>
+                <option value="">Overig actief</option>
+                <option value="">Overig niet actief</option>
+                <option value="">Pensioen</option>
+                <option value="">Vader onbekend</option>
+                <option value="">Zonder inkomen</option>
+                <option value="">Onbekend</option>
+                </select>
+              </div>
+
+            </fieldset>
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

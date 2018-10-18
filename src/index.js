@@ -132,6 +132,13 @@ class MyApp extends PolymerElement {
           background: rgba(200, 200, 200, 0.7);
         }
 
+<<<<<<< HEAD
+=======
+        .drawer-list a:focus {
+
+        }
+
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
         .iron-selected {
           width: 100%;
         }

@@ -28,8 +28,11 @@ class Home extends PolymerElement {
         <p>Vragenlijst</p>
         <p>Deze beslissingondersteuningstool kan gebruikt worden door hulpverleners om een objectieve risico-indicatie te krijgen op een zwaardere maatregel op basis van kenmerken van het kind, de ouders en het huishouden. Onder zwaardere maatregelen vallen in
             dit geval jeugdhulp met verblijf, jeugdbeschermingsmaatregelen en jeugdreclasseringsmaatregelen.</p>
+<<<<<<< HEAD
 
             <button on-click="resetButton">Reset vragenlijst</button>
+=======
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
       </div>
     `;
   }

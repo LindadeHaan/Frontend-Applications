@@ -10,7 +10,10 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
+<<<<<<< HEAD
 import '../components/my-justice.js';
+=======
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
 
 class Stap7 extends PolymerElement {
   static get template() {
@@ -24,11 +27,57 @@ class Stap7 extends PolymerElement {
       </style>
 
       <div class="card">
+<<<<<<< HEAD
         <h1>Justitie</h1>
 
         <!-- stap/card 5 -->
           <form>
             <my-justice></my-justice>
+=======
+        <!-- <div class="circle">3</div> -->
+        <h1>Justitie</h1>
+
+        <!-- stap/card 5 -->
+
+          <!-- <div class="circle">2</div> -->
+          <form>
+            <fieldset>
+              <!-- <legend>Justitie</legend> -->
+
+              <div class="dropdowns">
+                <label>Kind in het verleden verdacht geweest van een delict</label>
+                <select name="kind-verdacht-van-delict">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Kind in aanraking geweest met bureau HALT voor een delict</label>
+                <select name="kind-HALT-delict">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Vader verdacht van delict in het verleden</label>
+                <select name="vader-delict-verleden">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+              <div class="dropdowns">
+                <label>Moeder verdacht van delict in het verleden</label>
+                <select name="moeder-delict-verleden">
+                <option value="">Nee</option>
+                <option value="">Ja</option>
+                </select>
+              </div>
+
+            </fieldset>
+>>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

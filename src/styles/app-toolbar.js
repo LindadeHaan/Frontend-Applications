@@ -76,7 +76,6 @@ Polymer({
         padding: 0 16px;
         pointer-events: none;
         font-size: var(--app-toolbar-font-size, 20px);
-        background-color: #27c9ff;
       }
 
       :host ::slotted(*) {

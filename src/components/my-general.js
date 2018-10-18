@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class GeneralForm extends PolymerElement {
   static get template() {
@@ -98,6 +99,101 @@ onChangeAnswer(event) {
   const selectedValue = options[target.selectedIndex].value
 
   setNewLocalStorage(optionName, selectedValue, 'general')
+
+//SEX
+  if (optionName === 'sex') {
+    if (selectedValue === 'man') {
+      setValueToFactor(optionName, -0.12610868)
+    } else {
+      setValueToFactor(optionName, 0)
+    }
+  }
+
+//AGE
+  if (optionName === 'age') {
+    if (selectedValue === '0-4years') {
+      setValueToFactor(optionName, 0)
+    } else if (selectedValue === '4-8years') {
+      setValueToFactor(optionName, 0)
+    } else if (selectedValue === '8-12years') {
+      setValueToFactor(optionName, 0)
+    } else if (selectedValue === '12-16years') {
+      setValueToFactor(optionName, 0)
+    } else {
+      setValueToFactor(optionName, 0)
+    }
+  }
+
+//AGE MOTHER AT BIRTH
+  if (optionName === 'age-mother-birth') {
+    if (selectedValue === 'younger20') {
+      setValueToFactor(optionName, 0.45149781)
+    } else if (selectedValue === '20-25years') {
+      setValueToFactor(optionName, 0.10851786)
+    } else if (selectedValue === '25-30years') {
+      setValueToFactor(optionName, -0.08840876)
+    } else if (selectedValue === '30-35years') {
+      setValueToFactor(optionName, 0)
+    } else if (selectedValue === '35-40years') {
+      setValueToFactor(optionName, 0.23987545)
+    } else {
+      setValueToFactor(optionName, -0.11153052)
+    }
+  }
+
+  //AGE FATHER AT BIRTH
+    if (optionName === 'age-father-birth') {
+      if (selectedValue === 'younger25') {
+        setValueToFactor(optionName, 0.00587023)
+      } else if (selectedValue === '25-30years') {
+        setValueToFactor(optionName, 0.031069)
+      } else if (selectedValue === '30-35years') {
+        setValueToFactor(optionName, 0)
+      } else if (selectedValue === '35-40years') {
+        setValueToFactor(optionName, -0.2162358)
+      } else {
+        setValueToFactor(optionName, -0.32645414)
+      }
+    }
+
+    //AGE DIFFERENCE PARENTS
+      if (optionName === 'age-difference') {
+        if (selectedValue === 'lessThan5') {
+          setValueToFactor(optionName, 0)
+       }else {
+          setValueToFactor(optionName, 0.28580939)
+        }
+      }
+
+    //ORIGIN PARENTS
+      if (optionName === 'origin') {
+        if (selectedValue === 'dutch') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'notDutch') {
+          setValueToFactor(optionName, 0.16972268)
+        } else {
+          setValueToFactor(optionName, -0.08942976)
+        }
+      }
+
+    //HELP
+      if (optionName === 'help') {
+        if (selectedValue === 'yes') {
+          setValueToFactor(optionName, 1.52773741)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+  try {
+    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+    //triggers an event, which in this case is fake
+    //disPatchEvent triggered het fake event
+    document.dispatchEvent(new Event ('eventLauncher'))
+  } catch (error) {
+    throw new Error (error)
+  }
+
 }
 
 ready () {

@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class Justice extends PolymerElement {
   static get template() {
@@ -58,6 +59,51 @@ class Justice extends PolymerElement {
     console.log(selectedValue);
 
     setNewLocalStorage(optionName, selectedValue, 'justice')
+
+    //CHILD CRIME
+      if (optionName === 'crime-child') {
+        if (selectedValue === 'yes') {
+          setValueToFactor(optionName, 0.94737545)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+    //CHILD HALT
+      if (optionName === 'child-HALT') {
+        if (selectedValue === 'yes') {
+          setValueToFactor(optionName, 0.36448201)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+    //CRIME FATHER
+      if (optionName === 'crime-father') {
+        if (selectedValue === 'yes') {
+          setValueToFactor(optionName, 0.50027131)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+    //CRIME MOTHER
+      if (optionName === 'crime-mother') {
+        if (selectedValue === 'yes') {
+          setValueToFactor(optionName, 0.50027131)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+  try {
+    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+    //triggers an event, which in this case is fake
+    //disPatchEvent triggered het fake event
+    document.dispatchEvent(new Event ('eventLauncher'))
+  } catch (error) {
+    throw new Error (error)
+  }
   }
 
   ready () {

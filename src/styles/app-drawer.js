@@ -114,7 +114,7 @@ Polymer({
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
 
-        background-color: #fff;
+        background-color: #9baeff;
 
         @apply --app-drawer-content-container;
       }

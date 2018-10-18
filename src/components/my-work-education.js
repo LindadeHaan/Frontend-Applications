@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class WorkEducation extends PolymerElement {
   static get template() {
@@ -42,6 +43,7 @@ class WorkEducation extends PolymerElement {
         <option value="same">Opschalen of gelijkblijvend</option>
         <option value="up">Opschalen</option>
         <option value="down">Afschalen</option>
+        <option value="unknown">Onbekend</option>
         </select>
       </div>
 
@@ -94,6 +96,101 @@ class WorkEducation extends PolymerElement {
     console.log(selectedValue);
 
     setNewLocalStorage(optionName, selectedValue, 'work-education')
+
+    //KIND OF EDUCATION
+      if (optionName === 'kind-of-education') {
+        if (selectedValue === 'regularEducation') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'notRegularEducation') {
+          setValueToFactor(optionName, 0.33030829)
+        } else {
+          setValueToFactor(optionName, -0.76956641)
+        }
+      }
+
+    //EDUCATION LEVEL
+      if (optionName === 'education-level') {
+        if (selectedValue === 'elementry') {
+          setValueToFactor(optionName, 0.25231544)
+        } else if (selectedValue === 'vmbo1') {
+          setValueToFactor(optionName, 0.87841913)
+        } else if (selectedValue === 'vmbo2') {
+          setValueToFactor(optionName, 0.56881862)
+        } else if (selectedValue === 'middleSchool') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'highSchool') {
+          setValueToFactor(optionName, -0.8356626)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+    //CHANGE OF EDUCATION
+      if (optionName === 'change-of-education') {
+        if (selectedValue === 'same') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'up') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'down') {
+          setValueToFactor(optionName, 0.58732282)
+        } else {
+          setValueToFactor(optionName, -1.11681655)
+        }
+      }
+
+    //EARLY SCHOOL LEAVER
+      if (optionName === 'early-school-leaver') {
+        if (selectedValue === 'education') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'outOfEducation') {
+          setValueToFactor(optionName, -13.64192657)
+        } else if (selectedValue === 'leaver') {
+          setValueToFactor(optionName, 0.34683899)
+        } else if (selectedValue === 'nvt') {
+          setValueToFactor(optionName, 0.38735846)
+        } else {
+          setValueToFactor(optionName, 0.80563824)
+        }
+      }
+
+    //EDUCATION LEVEL FATHER
+      if (optionName === 'education-level-father') {
+        if (selectedValue === 'vmbo1') {
+          setValueToFactor(optionName, -0.21629522)
+        } else if (selectedValue === 'vmbo2') {
+          setValueToFactor(optionName, 0.67119088)
+        } else if (selectedValue === 'middleSchool') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'highSchool') {
+          setValueToFactor(optionName, -12.08994875)
+        } else {
+          setValueToFactor(optionName, 0.88463779)
+        }
+      }
+
+    //EDUCATION LEVEL MOTHER
+      if (optionName === 'education-level-mother') {
+        if (selectedValue === 'vmbo1') {
+          setValueToFactor(optionName, 0.15935901)
+        } else if (selectedValue === 'vmbo2') {
+          setValueToFactor(optionName, 0.03334141)
+        } else if (selectedValue === 'middleSchool') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'highSchool') {
+          setValueToFactor(optionName, -13.03161926)
+        } else {
+          setValueToFactor(optionName, 0.03655114)
+        }
+      }
+
+  try {
+    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+    //triggers an event, which in this case is fake
+    //disPatchEvent triggered het fake event
+    document.dispatchEvent(new Event ('eventLauncher'))
+  } catch (error) {
+    throw new Error (error)
+  }
   }
 
   ready () {

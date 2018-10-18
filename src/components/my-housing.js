@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue} from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class Housing extends PolymerElement {
   static get template() {
@@ -50,6 +51,47 @@ class Housing extends PolymerElement {
     console.log(selectedValue);
 
     setNewLocalStorage(optionName, selectedValue, 'housing')
+
+    //HOUSE
+      if (optionName === 'house') {
+        if (selectedValue === 'ownHouse') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'rentalAllowance') {
+          setValueToFactor(optionName, 0.3840103)
+        } else if (selectedValue === 'rental') {
+          setValueToFactor(optionName, 0.40420458)
+        } else {
+          setValueToFactor(optionName, 2.40126358)
+        }
+      }
+
+    //HOUSEHOLD
+      if (optionName === 'type-household') {
+        if (selectedValue === 'oneParent') {
+          setValueToFactor(optionName, 0.49608469)
+        } else if (selectedValue === 'marriedChildren') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'onePerson') {
+          setValueToFactor(optionName, 1.7185851)
+        } else if (selectedValue === 'notMarriedChildren') {
+          setValueToFactor(optionName, 0.32693636)
+        } else if (selectedValue === 'Institutional') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'remainginHousehold') {
+          setValueToFactor(optionName, 0.91364613)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+  try {
+    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+    //triggers an event, which in this case is fake
+    //disPatchEvent triggered het fake event
+    document.dispatchEvent(new Event ('eventLauncher'))
+  } catch (error) {
+    throw new Error (error)
+  }
   }
 
   ready () {

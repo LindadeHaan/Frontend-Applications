@@ -8,10 +8,20 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
-import { calculateRisk } from './functions/calculateRisk.js';
-import { riskPercentageToWindow } from './functions/riskPercentageToWindow.js';
+import {
+  PolymerElement,
+  html
+} from '@polymer/polymer/polymer-element.js';
+import {
+  setPassiveTouchGestures,
+  setRootPath
+} from '@polymer/polymer/lib/utils/settings.js';
+import {
+  calculateRisk
+} from './functions/calculateRisk.js';
+import {
+  riskPercentageToWindow
+} from './functions/riskPercentageToWindow.js';
 // import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/app-header/app-header.js';
@@ -42,50 +52,48 @@ window.addEventListener("load", () => {
   const data = window.localStorage.getItem('data') || []
 
   if (!data.length > 0) {
-	  const optionData = [
-		  {
-			  'id' : '1',
-			  'general' : {
-				  'sex': '',
-          'age': '',
-          'age-mother-birth': '',
-          'age-father-birth': '',
-          'age-difference': '',
-          'origin': '',
-          'help': ''
-			  },
-        'work-education' : {
-          'kind-of-education': '',
-          'education-level': '',
-          'change-of-education': '',
-          'early-school-leaver': '',
-          'education-level-father': '',
-          'education-level-mother': ''
-        },
-        'housing' : {
-          'house': '',
-          'type-household': ''
-        },
-        'house-relationships' : {
-          'divorced': ''
-        },
-        'mental-health' : {
-          'victim': ''
-        },
-        'participation' : {
-          'social-participation-father': '',
-          'social-participation-mother': '',
-          'economic-status-father': '',
-          'economic-status-mother': ''
-        },
-        'justice' : {
-          'crime-child': '',
-          'child-HALT': '',
-          'crime-father': '',
-          'crime-mother': ''
-        }
-		  }
-	  ]
+    const optionData = [{
+      'id': '1',
+      'general': {
+        'sex': '',
+        'age': '',
+        'age-mother-birth': '',
+        'age-father-birth': '',
+        'age-difference': '',
+        'origin': '',
+        'help': ''
+      },
+      'work-education': {
+        'kind-of-education': '',
+        'education-level': '',
+        'change-of-education': '',
+        'early-school-leaver': '',
+        'education-level-father': '',
+        'education-level-mother': ''
+      },
+      'housing': {
+        'house': '',
+        'type-household': ''
+      },
+      'house-relationships': {
+        'divorced': ''
+      },
+      'mental-health': {
+        'victim': ''
+      },
+      'participation': {
+        'social-participation-father': '',
+        'social-participation-mother': '',
+        'economic-status-father': '',
+        'economic-status-mother': ''
+      },
+      'justice': {
+        'crime-child': '',
+        'child-HALT': '',
+        'crime-father': '',
+        'crime-mother': ''
+      }
+    }]
 
     window.localStorage.setItem('data', JSON.stringify(optionData))
   }
@@ -95,10 +103,10 @@ window.addEventListener("load", () => {
 
 class MyApp extends PolymerElement {
   static get template() {
-    return html`
+    return html `
       <style>
         :host {
-          --app-primary-color: #27c9ff;
+          --app-primary-color: ;
           --app-secondary-color: black;
           display: block;
         }
@@ -108,7 +116,7 @@ class MyApp extends PolymerElement {
         }
 
         app-header {
-          color: #fff;
+          color: #000;
           background-color: var(--app-primary-color);
         }
 
@@ -116,8 +124,8 @@ class MyApp extends PolymerElement {
           --paper-icon-button-ink-color: white;
         }
 
-        .drawer-list {
-          margin: 0 20px;
+        app-toolbar {
+          font-weight: 600;
         }
 
         .drawer-list a {
@@ -132,7 +140,7 @@ class MyApp extends PolymerElement {
           color: black;
           font-weight: bold;
           width: auto;
-          background: rgba(200, 200, 200, 0.7);
+          background: rgba(103, 126, 229, 0.8);
         }
 
         .iron-selected {
@@ -141,8 +149,15 @@ class MyApp extends PolymerElement {
 
         .drawer-list a:hover {
           /* color: rgba(140, 140, 140, 0.8); */
-          background: rgba(140, 140, 140, 0.8);
+          background: rgba(103, 126, 229, 0.8);
         }
+
+        h1.risk {
+          text-align: center;
+          font-size: 3rem;
+          /* border: solid 1px; */
+        }
+
       </style>
 
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -154,12 +169,10 @@ class MyApp extends PolymerElement {
       <app-drawer-layout fullbleed="" narrow="{{narrow}}">
         <!-- Drawer content -->
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
+        <!-- PERCENTAGE -->
+        <app-toolbar>Indicatie</app-toolbar>
+        <h1 class="risk">[[riskPercentage()]]%</h1>
           <app-toolbar>Menu</app-toolbar>
-<!-- PERCENTAGE -->
-
-<h1 class="risk">[[riskPercentage()]]%</h1>
-
-
 
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
             <a name="home" href="[[rootPath]]home">Home</a>
@@ -179,7 +192,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">Risico Indicatie</div>
+              <div main-title="">Kind veilig thuis</div>
             </app-toolbar>
           </app-header>
 
@@ -218,10 +231,10 @@ class MyApp extends PolymerElement {
   }
 
   _routePageChanged(page) {
-     // Show the corresponding page according to the route.
-     //
-     // If no page was found in the route data, page will be an empty string.
-     // Show 'home' in that case. And if the page doesn't exist, show 'view404'.
+    // Show the corresponding page according to the route.
+    //
+    // If no page was found in the route data, page will be an empty string.
+    // Show 'home' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = 'home';
     } else if (['home', 'stap1', 'stap2', 'stap3', 'stap4', 'stap5', 'stap6', 'stap7'].indexOf(page) !== -1) {
@@ -243,44 +256,44 @@ class MyApp extends PolymerElement {
     // statement, so break it up.
     switch (page) {
       case 'home':
-        import('./views/my-home.js');
+        import ('./views/my-home.js');
         break;
       case 'stap1':
-        import('./views/my-stap1.js');
+        import ('./views/my-stap1.js');
         break;
       case 'stap2':
-        import('./views/my-stap2.js');
+        import ('./views/my-stap2.js');
         break;
       case 'stap3':
-        import('./views/my-stap3.js');
+        import ('./views/my-stap3.js');
         break;
-        case 'stap4':
-          import('./views/my-stap4.js');
-          break;
-        case 'stap5':
-          import('./views/my-stap5.js');
-          break;
-        case 'stap6':
-          import('./views/my-stap6.js');
-          break;
-        case 'stap7':
-          import('./views/my-stap7.js');
-          break;
-        case 'view404':
-          import('./views/my-view404.js');
-          break;
+      case 'stap4':
+        import ('./views/my-stap4.js');
+        break;
+      case 'stap5':
+        import ('./views/my-stap5.js');
+        break;
+      case 'stap6':
+        import ('./views/my-stap6.js');
+        break;
+      case 'stap7':
+        import ('./views/my-stap7.js');
+        break;
+      case 'view404':
+        import ('./views/my-view404.js');
+        break;
     }
   }
-riskPercentage () {
-  try {
-    return calculateRisk(JSON.parse(window.localStorage.getItem('dataFactors')))
-  } catch (error) {
-    throw new Error (error)
+  riskPercentage() {
+    try {
+      return calculateRisk(JSON.parse(window.localStorage.getItem('dataFactors')))
+    } catch (error) {
+      throw new Error(error)
+    }
   }
-}
 
-ready() {
-  super.ready()
+  ready() {
+    super.ready()
     // launch fake event
     document.addEventListener('eventLauncher', () => {
       // eerst naar shadowRoot gaan voordat we iets kunnen aanspreken in de Dom: is iets van polymer
@@ -292,10 +305,10 @@ ready() {
         //add to h1
         shadowDom.textContent = `${percentageCalculation}%`
       } catch (error) {
-        throw new Error (error)
+        throw new Error(error)
       }
     })
-}
+  }
 
 
 }

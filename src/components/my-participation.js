@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
 import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
 import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
+import { setValueToFactor } from '../functions/setValueToFactor.js';
 
 class Participation extends PolymerElement {
   static get template() {
@@ -91,6 +92,72 @@ class Participation extends PolymerElement {
     console.log(selectedValue);
 
     setNewLocalStorage(optionName, selectedValue, 'participation')
+
+    //SOCIAL PARTICIPATION FATHER
+      if (optionName === 'social-participation-father') {
+        if (selectedValue === 'work') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'noWork') {
+          setValueToFactor(optionName, 0.33771646)
+        } else {
+          setValueToFactor(optionName, 0.23485558)
+        }
+      }
+
+    //SOCIAL PARTICIPATION MOTHER
+      if (optionName === 'social-participation-mother') {
+        if (selectedValue === 'work') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'noWork') {
+          setValueToFactor(optionName, 0.36957624)
+        } else {
+          setValueToFactor(optionName, -0.95012155)
+        }
+      }
+
+    //ECONOMIC STATUS FATHER
+      if (optionName === 'economic-status-father') {
+        if (selectedValue === 'assistance') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'incapacitated') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'socialServices') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'unemploymentBenefit') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'civilServant') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'director') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'privateCompany') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'independent') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'student') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'active') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'notActive') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'retired') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'fatherUnknown') {
+          setValueToFactor(optionName, 0)
+        } else if (selectedValue === 'noIncome') {
+          setValueToFactor(optionName, 0)
+        } else {
+          setValueToFactor(optionName, 0)
+        }
+      }
+
+  try {
+    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+    //triggers an event, which in this case is fake
+    //disPatchEvent triggered het fake event
+    document.dispatchEvent(new Event ('eventLauncher'))
+  } catch (error) {
+    throw new Error (error)
+  }
   }
 
   ready () {

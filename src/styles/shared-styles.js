@@ -42,15 +42,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       }
 
       fieldset {
-        border-color: #27c9ff;
+        border-color: #9baeff;
         color: #000;
-        /* column-count: 2;
-        column-width: 50%; */
-      }
-
-      legend {
-        margin-left: 20px;
-        margin-right: 20px;
       }
 
       label {
@@ -58,6 +51,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         margin-right: 10px;
         width: 40px;
         font-size: 14px;
+        font-weight: 500;
       }
 
       .dropdowns {
@@ -70,7 +64,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       /* DROPDOWN  */
       select {
         width: 40%;
-        border: solid 1px rgba(39, 201, 255);
+        border: solid 1px rgba(155, 174, 255, 0.4);
         height: 35px;
         font-size: 14px;
         padding: 5px;
@@ -78,13 +72,11 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         float: right;
         margin-right: 20px;
         font-family: "Exo", sans-serif;
-        /* -webkit-appearance: listitem;
-        -webkit-border-radius: 0px; */
       }
 
       select:hover {
-        background: rgba(39, 201, 255, 0.4);
-        border: solid 1px rgba(39, 201, 255, 0.4);
+        background: rgba(155, 174, 255, 0.4);
+        border: solid 1px rgba(155, 174, 255, 0.4);
       }
 
       /* select:valid {
@@ -103,13 +95,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         height: 40px;
         font-size: 16px;
         font-family: "Exo", sans-serif;
-        background: rgba(39, 201, 255, 0.4);
-        border: solid 1px rgba(39, 201, 255, 0.4);
+        background: rgba(155, 174, 255, 0.4);
+        border: solid 1px rgba(155, 174, 255, 0.4);
         }
 
         button:hover {
-          background: rgb(39, 201, 255);
-          border: solid 1px rgb(39, 201, 255);
+          background: rgb(155, 174, 255);
+          border: solid 1px rgb(155, 174, 255);
         }
     </style>
   </template>

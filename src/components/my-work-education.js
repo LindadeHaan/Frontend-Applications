@@ -1,8 +1,8 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
-import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
-import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
-import { setValueToFactor } from '../functions/setValueToFactor.js';
+import { newLocalStorage } from '../functions/newLocalStorage.js';
+import { valueLocalStorage } from '../functions/valueLocalStorage.js';
+import { factorValue } from '../functions/factorValue.js';
 
 class WorkEducation extends PolymerElement {
   static get template() {
@@ -51,7 +51,7 @@ class WorkEducation extends PolymerElement {
         <label>Voortijdig schoolverlater</label>
         <select name="early-school-leaver" id="early-school-leaver" on-change="onChangeAnswer">
         <option disabled="disabled" selected="selected">Selecteer</option>
-        <option value="education">Door in onderijs</option>
+        <option value="education">Door in onderwijs</option>
         <option value="outOfEducation">Uit onderwijs met startkwalificatie</option>
         <option value="leaver">Voortijdig schoolverlaten</option>
         <option value="nvt">Niet van toepassing</option>
@@ -95,128 +95,128 @@ class WorkEducation extends PolymerElement {
     const selectedValue = options[target.selectedIndex].value
     console.log(selectedValue);
 
-    setNewLocalStorage(optionName, selectedValue, 'work-education')
+    newLocalStorage(optionName, selectedValue, 'work-education')
 
     //KIND OF EDUCATION
-      if (optionName === 'kind-of-education') {
-        if (selectedValue === 'regularEducation') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'notRegularEducation') {
-          setValueToFactor(optionName, 0.33030829)
-        } else {
-          setValueToFactor(optionName, -0.76956641)
-        }
+    if (optionName === 'kind-of-education') {
+      if (selectedValue === 'regularEducation') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'notRegularEducation') {
+        factorValue(optionName, 0.33030829)
+      } else {
+        factorValue(optionName, -0.76956641)
       }
+    }
 
     //EDUCATION LEVEL
-      if (optionName === 'education-level') {
-        if (selectedValue === 'elementry') {
-          setValueToFactor(optionName, 0.25231544)
-        } else if (selectedValue === 'vmbo1') {
-          setValueToFactor(optionName, 0.87841913)
-        } else if (selectedValue === 'vmbo2') {
-          setValueToFactor(optionName, 0.56881862)
-        } else if (selectedValue === 'middleSchool') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'highSchool') {
-          setValueToFactor(optionName, -0.8356626)
-        } else {
-          setValueToFactor(optionName, 0)
-        }
+    if (optionName === 'education-level') {
+      if (selectedValue === 'elementry') {
+        factorValue(optionName, 0.25231544)
+      } else if (selectedValue === 'vmbo1') {
+        factorValue(optionName, 0.87841913)
+      } else if (selectedValue === 'vmbo2') {
+        factorValue(optionName, 0.56881862)
+      } else if (selectedValue === 'middleSchool') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'highSchool') {
+        factorValue(optionName, -0.8356626)
+      } else {
+        factorValue(optionName, 0)
       }
+    }
 
     //CHANGE OF EDUCATION
-      if (optionName === 'change-of-education') {
-        if (selectedValue === 'same') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'up') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'down') {
-          setValueToFactor(optionName, 0.58732282)
-        } else {
-          setValueToFactor(optionName, -1.11681655)
-        }
+    if (optionName === 'change-of-education') {
+      if (selectedValue === 'same') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'up') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'down') {
+        factorValue(optionName, 0.58732282)
+      } else {
+        factorValue(optionName, -1.11681655)
       }
+    }
 
     //EARLY SCHOOL LEAVER
-      if (optionName === 'early-school-leaver') {
-        if (selectedValue === 'education') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'outOfEducation') {
-          setValueToFactor(optionName, -13.64192657)
-        } else if (selectedValue === 'leaver') {
-          setValueToFactor(optionName, 0.34683899)
-        } else if (selectedValue === 'nvt') {
-          setValueToFactor(optionName, 0.38735846)
-        } else {
-          setValueToFactor(optionName, 0.80563824)
-        }
+    if (optionName === 'early-school-leaver') {
+      if (selectedValue === 'education') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'outOfEducation') {
+        factorValue(optionName, -13.64192657)
+      } else if (selectedValue === 'leaver') {
+        factorValue(optionName, 0.34683899)
+      } else if (selectedValue === 'nvt') {
+        factorValue(optionName, 0.38735846)
+      } else {
+        factorValue(optionName, 0.80563824)
       }
+    }
 
     //EDUCATION LEVEL FATHER
-      if (optionName === 'education-level-father') {
-        if (selectedValue === 'vmbo1') {
-          setValueToFactor(optionName, -0.21629522)
-        } else if (selectedValue === 'vmbo2') {
-          setValueToFactor(optionName, 0.67119088)
-        } else if (selectedValue === 'middleSchool') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'highSchool') {
-          setValueToFactor(optionName, -12.08994875)
-        } else {
-          setValueToFactor(optionName, 0.88463779)
-        }
+    if (optionName === 'education-level-father') {
+      if (selectedValue === 'vmbo1') {
+        factorValue(optionName, -0.21629522)
+      } else if (selectedValue === 'vmbo2') {
+        factorValue(optionName, 0.67119088)
+      } else if (selectedValue === 'middleSchool') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'highSchool') {
+        factorValue(optionName, -12.08994875)
+      } else {
+        factorValue(optionName, 0.88463779)
       }
+    }
 
     //EDUCATION LEVEL MOTHER
-      if (optionName === 'education-level-mother') {
-        if (selectedValue === 'vmbo1') {
-          setValueToFactor(optionName, 0.15935901)
-        } else if (selectedValue === 'vmbo2') {
-          setValueToFactor(optionName, 0.03334141)
-        } else if (selectedValue === 'middleSchool') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'highSchool') {
-          setValueToFactor(optionName, -13.03161926)
-        } else {
-          setValueToFactor(optionName, 0.03655114)
-        }
+    if (optionName === 'education-level-mother') {
+      if (selectedValue === 'vmbo1') {
+        factorValue(optionName, 0.15935901)
+      } else if (selectedValue === 'vmbo2') {
+        factorValue(optionName, 0.03334141)
+      } else if (selectedValue === 'middleSchool') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'highSchool') {
+        factorValue(optionName, -13.03161926)
+      } else {
+        factorValue(optionName, 0.03655114)
       }
-
-  try {
-    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
-    //triggers an event, which in this case is fake
-    //disPatchEvent triggered het fake event
-    document.dispatchEvent(new Event ('eventLauncher'))
-  } catch (error) {
-    throw new Error (error)
-  }
-  }
-
-  ready () {
-    super.ready ()
-
-  const selectNames = [
-    'kind-of-education',
-    'education-level',
-    'change-of-education',
-    'early-school-leaver',
-    'education-level-father',
-    'education-level-mother'
-  ]
-
-  //loop over selectNames, get all selectNames
-  selectNames.map(selectNames => {
-    //access via shadowroot html elements with selectNames
-    const select = this.shadowRoot.getElementById(selectNames)
-    //get local localStorage
-    const valueLocalStorage = getLocalStorageValue('work-education', selectNames)
-    console.log(valueLocalStorage)
-
-    if (valueLocalStorage) {
-      select.value = valueLocalStorage
     }
-  })
+
+    try {
+      window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+      //triggers an event, which in this case is fake
+      //disPatchEvent triggered het fake event
+      document.dispatchEvent(new Event('eventLauncher'))
+    } catch (error) {
+      throw new Error(error)
+    }
+  }
+
+  ready() {
+    super.ready()
+
+    const selectNames = [
+      'kind-of-education',
+      'education-level',
+      'change-of-education',
+      'early-school-leaver',
+      'education-level-father',
+      'education-level-mother'
+    ]
+
+    //loop over selectNames, get all selectNames
+    selectNames.map(selectNames => {
+      //access via shadowroot html elements with selectNames
+      const select = this.shadowRoot.getElementById(selectNames)
+      //get local localStorage
+      const localStorageValue = valueLocalStorage('work-education', selectNames)
+      console.log(localStorageValue)
+
+      if (localStorageValue) {
+        select.value = localStorageValue
+      }
+    })
   }
 }
 

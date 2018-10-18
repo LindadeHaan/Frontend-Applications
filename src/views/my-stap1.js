@@ -1,23 +1,23 @@
  /*
- *
- * @license
- * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
+  *
+  * @license
+  * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+  * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+  * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+  * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+  * Code distributed by Google as part of the polymer project is also
+  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import '../styles/shared-styles.js';
-import '@polymer/iron-dropdown/iron-dropdown.js';
-import '@polymer/iron-form/iron-form.js';
-import '../components/my-general.js';
+ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+ import '../styles/shared-styles.js';
+ import '@polymer/iron-dropdown/iron-dropdown.js';
+ import '@polymer/iron-form/iron-form.js';
+ import '../components/my-general.js';
 
-class Stap1 extends PolymerElement {
-  static get template() {
-    return html`
+ class Stap1 extends PolymerElement {
+   static get template() {
+     return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -25,29 +25,27 @@ class Stap1 extends PolymerElement {
           padding: 10px;
         }
 
-      :host {
-  display: inline-block;
-}
+        :host {
+          display: inline-block;
+        }
 
-h4:first-of-type {
-  margin-top: 0;
-}
+        h4:first-of-type {
+          margin-top: 0;
+        }
 
       </style>
 
-    <div class="card">
-  <h1>Algemeen</h1>
+        <div class="card">
+          <h1>Algemeen</h1>
 
-<form>
-  <my-general></my-general>
-  </form>
+            <form>
+              <my-general></my-general>
+            </form>
 
-</div>
-
-
+        </div>
     `;
-  }
-}
+   }
+ }
 
 
-window.customElements.define('my-stap1', Stap1);
+ window.customElements.define('my-stap1', Stap1);

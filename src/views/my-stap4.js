@@ -14,7 +14,7 @@ import '../components/my-house-relationships.js';
 
 class Stap4 extends PolymerElement {
   static get template() {
-    return html`
+    return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -25,7 +25,6 @@ class Stap4 extends PolymerElement {
 
       <div class="card">
         <h1>Huiselijke Relaties</h1>
-
         <!-- stap/card 4 -->
           <form>
             <my-house-relationships></my-house-relationships>

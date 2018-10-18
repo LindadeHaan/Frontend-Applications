@@ -14,7 +14,7 @@ import '../components/my-justice.js';
 
 class Stap7 extends PolymerElement {
   static get template() {
-    return html`
+    return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -25,7 +25,6 @@ class Stap7 extends PolymerElement {
 
       <div class="card">
         <h1>Justitie</h1>
-
         <!-- stap/card 5 -->
           <form>
             <my-justice></my-justice>

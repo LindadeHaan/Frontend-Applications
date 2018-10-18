@@ -7,7 +7,7 @@
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
-
+ 
 import '@polymer/polymer/polymer-element.js';
 
 const $_documentContainer = document.createElement('template');
@@ -18,24 +18,24 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         margin: 24px 40px;
         padding: 16px;
         color: #757575;
-        background-color: #fff;
+        background-color: #afafaf;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       }
 
       h1 {
         margin: 16px 0;
-        color: #212121;
+        color: #f7f7f7;
         font-size: 22px;
       }
 
       h4 {
-        color: #232323;
+        color: #f7f7f7;
         font-size: 18px;
         margin-bottom: 10px;
       }
 
       p {
-        color: #232323;
+        color: #f7f7f7;
         margin-top: 10px;
         font-family: "Open Sans";
       }
@@ -54,8 +54,10 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       }
 
       fieldset {
-        border-color: #9baeff;
-        color: #000;
+        border-color: #088e2a;
+        border-right: none;
+        border-bottom: none;
+        border-top: none;
       }
 
       label {
@@ -76,44 +78,38 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       /* DROPDOWN  */
       select {
         width: 40%;
-        border: solid 1px rgba(155, 174, 255, 0.4);
+        border: solid 1px rgba(8, 142, 42, 0.4);
         height: 35px;
         font-size: 14px;
         padding: 5px;
-        background: #fff;
+        background: #f7f7f7;
         float: right;
         margin-right: 20px;
         font-family: "Exo", sans-serif;
       }
 
       select:hover {
-        background: rgba(155, 174, 255, 0.4);
-        border: solid 1px rgba(155, 174, 255, 0.4);
+        background: rgba(8, 142, 42, 0.4);
+        border: solid 1px rgba(8, 142, 42, 0.4);
+        cursor: pointer;
       }
 
       /* select:valid {
         background: rgb(39, 201, 255);
       } */
 
-      fieldset {
-        border-right: none;
-        border-bottom: none;
-        border-top: none;
-
-      }
-
       button {
         width: 100%;
         height: 40px;
         font-size: 16px;
         font-family: "Exo", sans-serif;
-        background: rgba(155, 174, 255, 0.4);
-        border: solid 1px rgba(155, 174, 255, 0.4);
+        background: rgba(8, 142, 42, 0.4);
+        border: solid 1px rgba(8, 142, 42, 0.4);
         }
 
         button:hover {
-          background: rgb(155, 174, 255);
-          border: solid 1px rgb(155, 174, 255);
+          background: rgb(8, 142, 42);
+          border: solid 1px rgb(8, 142, 42);
           cursor: pointer;
         }
     </style>

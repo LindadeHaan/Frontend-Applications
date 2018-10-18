@@ -114,7 +114,12 @@ npm init
 After npm init you just have to fill in what your terminal requires. In your package.json file you can see which packages you already installed and which packages you still have to install.
 
 ## Concept
+My idea was to make the all these questions less overwhelming. I wanted to make it accessible to the parents en children and maybe make it possible for the parents en children to fill in the questions.
 
+I wanted to give it a simplistic feel and I did not want to add to much to the page. The less there is on the page the less distractions.
+
+You see the impact of the choices on the percentage immediately. You don't have to fill in all the questions and then click a button to see the results. You can see the results immediately.
+Maybe you don't have to fill in all the questions to see if a child needs to get out from home sites (uit huis plaatsen).
 
 ## Process
 
@@ -155,10 +160,14 @@ I worked together with other people who had to work with the framework `Polymer`
 ##### Friday october 12
 Beginning to understand the framework a little bit more everytime. We found a tutorial to follow to understand the `selected` element in `Polymer`.
 
+I have watched a lot of tutorials on youtube and follow a couple of them.
+
 ##### Monday october 15
 Today the client came with on emergency worker who could be using the product we were making and there were two emergency workers that already use the existing app, but that does not function properly.
 
 It was very useful to hear what emergency workers want in tool they use at work.
+
+I followed a tutorial again. I do this to understand how the framework works.
 
 ##### Tuesday october 16
 Made several pages and links to them. Added all the forms.

@@ -13,7 +13,7 @@ import '../styles/shared-styles.js';
 
 class Home extends PolymerElement {
   static get template() {
-    return html`
+    return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -29,7 +29,7 @@ class Home extends PolymerElement {
 
         <h4>Gebruiksaanwijzing</h4>
         <p>Vul alle vragen in door de juiste opties te selecteren. Er komt dan een percentage aan de linkerkant van de pagina te staan.
-        Dit is een indicatie van het risico op een zware maatregel</p>
+        Dit is een indicatie van het risico op een zware maatregel.</p>
 
         <p>0 - 2%: Laag risico</p>
         <p>2 - 5%: Middelmatig risico</p>
@@ -40,7 +40,7 @@ class Home extends PolymerElement {
     `;
   }
 
-  resetButton(){
+  resetButton() {
     window.localStorage.clear();
     location.reload();
   }

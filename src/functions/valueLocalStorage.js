@@ -1,6 +1,8 @@
+// Source: Maikel van Veen
+// Explanation: Chelsea Dekker
 // storageKey: names of the pages. data array
 // storageName: names of the selects
-export const getLocalStorageValue = (storageKey, storageName) => {
+export const valueLocalStorage = (storageKey, storageName) => {
   // Gets the data from localStorage
   const data = window.localStorage.getItem('data')
 

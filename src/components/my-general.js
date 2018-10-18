@@ -3,14 +3,14 @@
 //You need this to be able to make a component.
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
-import { setNewLocalStorage } from '../functions/setNewLocalStorage.js';
-import { getLocalStorageValue } from '../functions/getLocalStorageValue.js';
-import { setValueToFactor } from '../functions/setValueToFactor.js';
+import { newLocalStorage } from '../functions/newLocalStorage.js';
+import { valueLocalStorage } from '../functions/valueLocalStorage.js';
+import { factorValue } from '../functions/factorValue.js';
 
 class GeneralForm extends PolymerElement {
   static get template() {
     // You can write html
-    return html`
+    return html `
 
 <style include="shared-styles">
 
@@ -92,149 +92,151 @@ class GeneralForm extends PolymerElement {
 
       </fieldset>
 `;
-}
-
-//Searching for the value that is similar to the select name.
-//Is called when the answer is changed.
-onChangeAnswer(event) {
-  //Searches for target in event.
-  const target = event.target
-  // const { target } = event
-  const options = event.options
-  // const { options } = target
-  // This is the target you are searching for.
-  const { name: optionName } = target
-  // selectedIndex gets the index number of the option.
-  // selectedIndex of options.
-  const selectedValue = options[target.selectedIndex].value
-
-  // Saves changes in local storage.
-  setNewLocalStorage(optionName, selectedValue, 'general')
-
-//SEX
-  if (optionName === 'sex') {
-    if (selectedValue === 'man') {
-      setValueToFactor(optionName, -0.12610868)
-    } else {
-      setValueToFactor(optionName, 0)
-    }
   }
 
-//AGE
-  if (optionName === 'age') {
-    if (selectedValue === '0-4years') {
-      setValueToFactor(optionName, 0)
-    } else if (selectedValue === '4-8years') {
-      setValueToFactor(optionName, 0)
-    } else if (selectedValue === '8-12years') {
-      setValueToFactor(optionName, 0)
-    } else if (selectedValue === '12-16years') {
-      setValueToFactor(optionName, 0)
-    } else {
-      setValueToFactor(optionName, 0)
-    }
-  }
+  // Source: Maikel van Veen. He figured out the code.
+  // Explanation: Chelsea Dekker. She explained the code to us so we'd know what the code does
+  // Searching for the value that is similar to the select name.
+  // Is called when the answer is changed.
+  onChangeAnswer(event) {
+    //Searches for target in event.
+    // const target = event.target
+    const { target } = event
+    // const options = event.options
+    const { options } = target
+    // This is the target you are searching for.
+    const { name: optionName } = target
+    // selectedIndex gets the index number of the option.
+    // selectedIndex of options.
+    const selectedValue = options[target.selectedIndex].value
 
-//AGE MOTHER AT BIRTH
-  if (optionName === 'age-mother-birth') {
-    if (selectedValue === 'younger20') {
-      setValueToFactor(optionName, 0.45149781)
-    } else if (selectedValue === '20-25years') {
-      setValueToFactor(optionName, 0.10851786)
-    } else if (selectedValue === '25-30years') {
-      setValueToFactor(optionName, -0.08840876)
-    } else if (selectedValue === '30-35years') {
-      setValueToFactor(optionName, 0)
-    } else if (selectedValue === '35-40years') {
-      setValueToFactor(optionName, 0.23987545)
-    } else {
-      setValueToFactor(optionName, -0.11153052)
-    }
-  }
+    // Saves changes in local storage.
+    newLocalStorage(optionName, selectedValue, 'general')
 
-  //AGE FATHER AT BIRTH
+    //SEX
+    if (optionName === 'sex') {
+      if (selectedValue === 'man') {
+        factorValue(optionName, -0.12610868)
+      } else {
+        factorValue(optionName, 0)
+      }
+    }
+
+    //AGE
+    if (optionName === 'age') {
+      if (selectedValue === '0-4years') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === '4-8years') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === '8-12years') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === '12-16years') {
+        factorValue(optionName, 0)
+      } else {
+        factorValue(optionName, 0)
+      }
+    }
+
+    //AGE MOTHER AT BIRTH
+    if (optionName === 'age-mother-birth') {
+      if (selectedValue === 'younger20') {
+        factorValue(optionName, 0.45149781)
+      } else if (selectedValue === '20-25years') {
+        factorValue(optionName, 0.10851786)
+      } else if (selectedValue === '25-30years') {
+        factorValue(optionName, -0.08840876)
+      } else if (selectedValue === '30-35years') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === '35-40years') {
+        factorValue(optionName, 0.23987545)
+      } else {
+        factorValue(optionName, -0.11153052)
+      }
+    }
+
+    //AGE FATHER AT BIRTH
     if (optionName === 'age-father-birth') {
       if (selectedValue === 'younger25') {
-        setValueToFactor(optionName, 0.00587023)
+        factorValue(optionName, 0.00587023)
       } else if (selectedValue === '25-30years') {
-        setValueToFactor(optionName, 0.031069)
+        factorValue(optionName, 0.031069)
       } else if (selectedValue === '30-35years') {
-        setValueToFactor(optionName, 0)
+        factorValue(optionName, 0)
       } else if (selectedValue === '35-40years') {
-        setValueToFactor(optionName, -0.2162358)
+        factorValue(optionName, -0.2162358)
       } else {
-        setValueToFactor(optionName, -0.32645414)
+        factorValue(optionName, -0.32645414)
       }
     }
 
     //AGE DIFFERENCE PARENTS
-      if (optionName === 'age-difference') {
-        if (selectedValue === 'lessThan5') {
-          setValueToFactor(optionName, 0)
-       }else {
-          setValueToFactor(optionName, 0.28580939)
-        }
+    if (optionName === 'age-difference') {
+      if (selectedValue === 'lessThan5') {
+        factorValue(optionName, 0)
+      } else {
+        factorValue(optionName, 0.28580939)
       }
+    }
 
     //ORIGIN PARENTS
-      if (optionName === 'origin') {
-        if (selectedValue === 'dutch') {
-          setValueToFactor(optionName, 0)
-        } else if (selectedValue === 'notDutch') {
-          setValueToFactor(optionName, 0.16972268)
-        } else {
-          setValueToFactor(optionName, -0.08942976)
-        }
+    if (optionName === 'origin') {
+      if (selectedValue === 'dutch') {
+        factorValue(optionName, 0)
+      } else if (selectedValue === 'notDutch') {
+        factorValue(optionName, 0.16972268)
+      } else {
+        factorValue(optionName, -0.08942976)
       }
+    }
 
     //HELP
-      if (optionName === 'help') {
-        if (selectedValue === 'yes') {
-          setValueToFactor(optionName, 1.52773741)
-        } else {
-          setValueToFactor(optionName, 0)
-        }
+    if (optionName === 'help') {
+      if (selectedValue === 'yes') {
+        factorValue(optionName, 1.52773741)
+      } else {
+        factorValue(optionName, 0)
       }
+    }
 
-  try {
-    window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
-    //triggers an event, which in this case is fake
-    //disPatchEvent triggered het fake event
-    document.dispatchEvent(new Event ('eventLauncher'))
-  } catch (error) {
-    throw new Error (error)
+    try {
+      window.localStorage.setItem('dataFactors', JSON.stringify(window.dataFactors))
+      //triggers an event, which in this case is fake
+      //disPatchEvent triggered het fake event
+      document.dispatchEvent(new Event('eventLauncher'))
+    } catch (error) {
+      throw new Error(error)
+    }
+
   }
 
-}
+  //opzoeken!!!!
+  ready() {
+    // super betekent dat er iets overschreven moet worden.
+    super.ready()
 
-//opzoeken!!!!
-ready () {
-  // super betekent dat er iets overschreven moet worden.
-  super.ready ()
+    const selectNames = [
+      'sex',
+      'age',
+      'age-mother-birth',
+      'age-father-birth',
+      'age-difference',
+      'origin',
+      'help'
+    ]
 
-const selectNames = [
-  'sex',
-  'age',
-  'age-mother-birth',
-  'age-father-birth',
-  'age-difference',
-  'origin',
-  'help'
-]
+    //loop over selectNames, get all selectNames
+    selectNames.map(selectNames => {
+      //access via shadowroot html elements with selectNames
+      const select = this.shadowRoot.getElementById(selectNames)
+      //get localStorage
+      const localStorageValue = valueLocalStorage('general', selectNames)
+      console.log(localStorageValue)
 
-//loop over selectNames, get all selectNames
-selectNames.map(selectNames => {
-  //access via shadowroot html elements with selectNames
-  const select = this.shadowRoot.getElementById(selectNames)
-  //get localStorage
-  const valueLocalStorage = getLocalStorageValue('general', selectNames)
-  console.log(valueLocalStorage)
-
-  if (valueLocalStorage) {
-    select.value = valueLocalStorage
+      if (localStorageValue) {
+        select.value = localStorageValue
+      }
+    })
   }
-})
-}
 
 }
 

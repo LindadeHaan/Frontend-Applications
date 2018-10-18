@@ -8,26 +8,14 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import {
-  PolymerElement,
-  html
-} from '@polymer/polymer/polymer-element.js';
-import {
-  setPassiveTouchGestures,
-  setRootPath
-} from '@polymer/polymer/lib/utils/settings.js';
-import {
-  calculateRisk
-} from './functions/calculateRisk.js';
-import {
-  riskPercentageToWindow
-} from './functions/riskPercentageToWindow.js';
-// import '@polymer/app-layout/app-drawer/app-drawer.js';
+import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
+import { calculateRisk } from './functions/calculateRisk.js';
+import { riskPercentageToWindow } from './functions/riskPercentageToWindow.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
 import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
-// import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
 import '@polymer/iron-pages/iron-pages.js';
@@ -49,7 +37,7 @@ setRootPath(MyAppGlobals.rootPath);
 window.addEventListener("load", () => {
   console.log("All resources finished loading!");
 
- //Gets data from data or an empty object.
+  //Gets data from data or an empty object.
   const data = window.localStorage.getItem('data') || []
 
   if (!data.length > 0) {
@@ -118,8 +106,13 @@ class MyApp extends PolymerElement {
         }
 
         app-header {
-          color: #000;
-          background-color: var(--app-primary-color);
+          color: #fff;
+          /* background-color: var(--app-primary-color); */
+          background-color: #606060;
+        }
+
+        app-header-layout {
+          background-color: #606060;
         }
 
         app-header paper-icon-button {
@@ -142,7 +135,7 @@ class MyApp extends PolymerElement {
           color: black;
           font-weight: bold;
           width: auto;
-          background: rgba(103, 126, 229, 0.8);
+          background: rgba(14, 178, 56, 0.8);
         }
 
         .iron-selected {
@@ -150,14 +143,12 @@ class MyApp extends PolymerElement {
         }
 
         .drawer-list a:hover {
-          /* color: rgba(140, 140, 140, 0.8); */
-          background: rgba(103, 126, 229, 0.8);
+          background: rgba(14, 178, 56, 0.8);
         }
 
         h1.risk {
           text-align: center;
           font-size: 3rem;
-          /* border: solid 1px; */
         }
 
       </style>
@@ -234,7 +225,6 @@ class MyApp extends PolymerElement {
 
   _routePageChanged(page) {
     // Show the corresponding page according to the route.
-    //
     // If no page was found in the route data, page will be an empty string.
     // Show 'home' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
@@ -296,15 +286,14 @@ class MyApp extends PolymerElement {
 
   ready() {
     super.ready()
-    // launch fake event
+    // Launch fake event
     document.addEventListener('eventLauncher', () => {
-      // eerst naar shadowRoot gaan voordat we iets kunnen aanspreken in de Dom: is iets van polymer
+      // First go to the shadowRoot before you can call something in the DOM -> is something in Polymer
       const shadowDom = this.shadowRoot.querySelector('.risk')
       try {
-        //retrigger calculation when another option is clicked
-        // percentage weer berekenen
+        // Retrigger calculation when another option is clickedn
         const percentageCalculation = calculateRisk(JSON.parse(window.localStorage.getItem('dataFactors')))
-        //add to h1
+        // Add to h1
         shadowDom.textContent = `${percentageCalculation}%`
       } catch (error) {
         throw new Error(error)

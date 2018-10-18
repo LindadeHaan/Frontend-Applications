@@ -14,7 +14,7 @@ import '../components/my-work-education.js';
 
 class Stap2 extends PolymerElement {
   static get template() {
-    return html`
+    return html `
       <style include="shared-styles">
         :host {
           display: block;

@@ -70,7 +70,7 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import { afterNextRender } from '@polymer/polymer/lib/utils/render-status.js';
 import { dom } from '@polymer/polymer/lib/legacy/polymer.dom.js';
 Polymer({
-  _template: html`
+  _template: html `
     <style>
       :host {
         position: fixed;
@@ -114,7 +114,7 @@ Polymer({
         -webkit-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
 
-        background-color: #9baeff;
+        background-color: #088e2a;
 
         @apply --app-drawer-content-container;
       }
@@ -193,46 +193,74 @@ Polymer({
     /**
      * The opened state of the drawer.
      */
-    opened:
-        {type: Boolean, value: false, notify: true, reflectToAttribute: true},
+    opened: {
+      type: Boolean,
+      value: false,
+      notify: true,
+      reflectToAttribute: true
+    },
 
     /**
      * The drawer does not have a scrim and cannot be swiped close.
      */
-    persistent: {type: Boolean, value: false, reflectToAttribute: true},
+    persistent: {
+      type: Boolean,
+      value: false,
+      reflectToAttribute: true
+    },
 
     /**
      * The transition duration of the drawer in milliseconds.
      */
-    transitionDuration: {type: Number, value: 200},
+    transitionDuration: {
+      type: Number,
+      value: 200
+    },
 
     /**
      * The alignment of the drawer on the screen ('left', 'right', 'start' or
      * 'end'). 'start' computes to left and 'end' to right in LTR layout and
      * vice versa in RTL layout.
      */
-    align: {type: String, value: 'left'},
+    align: {
+      type: String,
+      value: 'left'
+    },
 
     /**
      * The computed, read-only position of the drawer on the screen ('left' or
      * 'right').
      */
-    position: {type: String, readOnly: true, reflectToAttribute: true},
+    position: {
+      type: String,
+      readOnly: true,
+      reflectToAttribute: true
+    },
 
     /**
      * Create an area at the edge of the screen to swipe open the drawer.
      */
-    swipeOpen: {type: Boolean, value: false, reflectToAttribute: true},
+    swipeOpen: {
+      type: Boolean,
+      value: false,
+      reflectToAttribute: true
+    },
 
     /**
      * Trap keyboard focus when the drawer is opened and not persistent.
      */
-    noFocusTrap: {type: Boolean, value: false},
+    noFocusTrap: {
+      type: Boolean,
+      value: false
+    },
 
     /**
      * Disables swiping on the drawer.
      */
-    disableSwipe: {type: Boolean, value: false}
+    disableSwipe: {
+      type: Boolean,
+      value: false
+    }
   },
 
   observers: [
@@ -367,7 +395,10 @@ Polymer({
 
     // Use Date.now() since event.timeStamp is inconsistent across browsers
     // (e.g. most browsers use milliseconds but FF 44 uses microseconds).
-    this._trackDetails.push({dx: event.detail.dx, timeStamp: Date.now()});
+    this._trackDetails.push({
+      dx: event.detail.dx,
+      timeStamp: Date.now()
+    });
   },
 
   _trackEnd: function(event) {
@@ -375,7 +406,7 @@ Polymer({
     var drawerWidth = this.getWidth();
     var isPositionLeft = this.position === 'left';
     var isInEndState = isPositionLeft ? (x >= 0 || x <= -drawerWidth) :
-                                        (x <= 0 || x >= drawerWidth);
+      (x <= 0 || x >= drawerWidth);
 
     if (!isInEndState) {
       // No longer need the track events after this method returns - allow them
@@ -402,7 +433,7 @@ Polymer({
       this.debounce('_resetDrawerState', this._resetDrawerState);
     } else {
       this.debounce(
-          '_resetDrawerState', this._resetDrawerState, this.transitionDuration);
+        '_resetDrawerState', this._resetDrawerState, this.transitionDuration);
     }
 
     this._styleTransitionDuration(this.transitionDuration);
@@ -526,8 +557,8 @@ Polymer({
 
     if (this.opened) {
       this._drawerState = this.persistent ?
-          this._DRAWER_STATE.OPENED_PERSISTENT :
-          this._DRAWER_STATE.OPENED;
+        this._DRAWER_STATE.OPENED_PERSISTENT :
+        this._DRAWER_STATE.OPENED;
     } else {
       this._drawerState = this._DRAWER_STATE.CLOSED;
     }
@@ -577,7 +608,7 @@ Polymer({
       '[contentEditable=true]:not([tabindex="-1"])'
     ].join(',');
     var focusableElements =
-        dom(this).querySelectorAll(focusableElementsSelector);
+      dom(this).querySelectorAll(focusableElementsSelector);
 
     if (focusableElements.length > 0) {
       this._firstTabStop = focusableElements[0];
@@ -608,16 +639,16 @@ Polymer({
 
     var TAB_KEYCODE = 9;
     if (this._drawerState === this._DRAWER_STATE.OPENED &&
-        event.keyCode === TAB_KEYCODE) {
+      event.keyCode === TAB_KEYCODE) {
       if (event.shiftKey) {
         if (this._firstTabStop &&
-            dom(event).localTarget === this._firstTabStop) {
+          dom(event).localTarget === this._firstTabStop) {
           event.preventDefault();
           this._lastTabStop.focus();
         }
       } else {
         if (this._lastTabStop &&
-            dom(event).localTarget === this._lastTabStop) {
+          dom(event).localTarget === this._lastTabStop) {
           event.preventDefault();
           this._firstTabStop.focus();
         }
@@ -631,7 +662,7 @@ Polymer({
     // Use a debounce timer instead of transitionend since transitionend won't
     // fire when app-drawer is display: none.
     this.debounce(
-        '_resetDrawerState', this._resetDrawerState, this.transitionDuration);
+      '_resetDrawerState', this._resetDrawerState, this.transitionDuration);
   },
 
   _MIN_FLING_THRESHOLD: 0.2,

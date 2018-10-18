@@ -1,4 +1,6 @@
-export const setValueToFactor = (optionName, factor) => {
+// Source: Maikel van Veen
+// Explanation: Chelsea Dekker
+export const factorValue = (optionName, factor) => {
   const dataFactors = window.dataFactors || []
 
   // Look factor for index or an object with optionName (lika a loop)

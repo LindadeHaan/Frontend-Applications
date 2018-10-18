@@ -67,7 +67,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         /* float: left; */
       }
 
-<<<<<<< HEAD
       /* DROPDOWN  */
       select {
         width: 40%;
@@ -76,20 +75,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         font-size: 14px;
         padding: 5px;
         background: #fff;
-=======
-      /* .algemeen-form {
-        column-count: 3;
-        column-width: 33%;
-      } */
-
-      /* DROPDOWN  */
-      select {
-        width: 50%;
-        height: 35px;
-        font-size: 12px;
-        padding: 5px;
-        background: rgb(220, 220, 220);
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
         float: right;
         margin-right: 20px;
         font-family: "Exo", sans-serif;
@@ -102,7 +87,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         border: solid 1px rgba(39, 201, 255, 0.4);
       }
 
-<<<<<<< HEAD
       /* select:valid {
         background: rgb(39, 201, 255);
       } */
@@ -127,8 +111,6 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
           background: rgb(39, 201, 255);
           border: solid 1px rgb(39, 201, 255);
         }
-=======
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
     </style>
   </template>
 </dom-module>`;

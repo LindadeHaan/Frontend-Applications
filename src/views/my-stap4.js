@@ -10,10 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
-<<<<<<< HEAD
 import '../components/my-house-relationships.js';
-=======
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
 
 class Stap4 extends PolymerElement {
   static get template() {
@@ -31,26 +28,8 @@ class Stap4 extends PolymerElement {
         <h1>Huiselijke Relaties</h1>
 
         <!-- stap/card 4 -->
-<<<<<<< HEAD
           <form>
             <my-house-relationships></my-house-relationships>
-=======
-
-          <!-- <div class="circle">2</div> -->
-          <form>
-            <fieldset>
-              <!-- <legend>Huiselijke relaties</legend> -->
-
-              <div class="dropdowns">
-                <label>Ouders gescheiden</label>
-                <select name="gescheiden">
-                <option value="">Ja</option>
-                <option value="">Nee</option>
-                </select>
-              </div>
-
-            </fieldset>
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

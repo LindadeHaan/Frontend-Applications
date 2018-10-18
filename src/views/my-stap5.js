@@ -10,10 +10,7 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '../styles/shared-styles.js';
-<<<<<<< HEAD
 import '../components/my-mental-health.js';
-=======
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
 
 class Stap5 extends PolymerElement {
   static get template() {
@@ -27,33 +24,11 @@ class Stap5 extends PolymerElement {
       </style>
 
       <div class="card">
-<<<<<<< HEAD
         <h1>Geestelijke Gezondheid</h1>
 
         <!-- stap/card 5 -->
           <form>
             <my-mental-health></my-mental-health>
-=======
-        <!-- <div class="circle">3</div> -->
-        <h1>Geestelijke Gezondheid</h1>
-
-        <!-- stap/card 5 -->
-
-          <!-- <div class="circle">2</div> -->
-          <form>
-            <fieldset>
-              <!-- <legend>Geestelijke gezondheid</legend> -->
-
-              <div class="dropdowns">
-                <label>Als slachtoffer bekend bij slachtofferhulp</label>
-                <select name="slachtofferhulp">
-                <option value="">Ja</option>
-                <option value="">Nee</option>
-                </select>
-              </div>
-
-            </fieldset>
->>>>>>> 5a6e690d3bbb68234e51ad421509520702754fad
           </form>
 
         <!-- <my-prev-arrow></my-prev-arrow>

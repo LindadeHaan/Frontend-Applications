@@ -106,79 +106,110 @@ Start server:
 npm start
 ```
 ##### package.json
-To make a package.json file you have to follow a few steps in your terminal:
+To make a package.json file you have to follow this step in you terminal:
 
 ```js
 npm init
 ```
-After npm init you just have to fill in what your terminal requires. In your package.json file you can see which packages you already installed and which packages you still have to install.
+After npm init you just have to fill in what your terminal requires. In your package.json file you can see which packages you already installed and which packages you still have to install. You can install these packages with:
+```js
+npm install _package-name_ --save
+```
 
 ## Concept
-My idea was to make the all these questions less overwhelming. I wanted to make it accessible to the parents en children and maybe make it possible for the parents en children to fill in the questions.
+My idea was to make all these questions less overwhelming, because there are so many of them. I did not necessarily change the questions or the order of the questions. I wanted to make ik more peaceful with the styling of the page.
+I wanted to make it accessible to the parents en children and maybe make it possible for the parents en children to fill in the questions.
 
 I wanted to give it a simplistic feel and I did not want to add to much to the page. The less there is on the page the less distractions.
 
 You see the impact of the choices on the percentage immediately. You don't have to fill in all the questions and then click a button to see the results. You can see the results immediately.
 Maybe you don't have to fill in all the questions to see if a child needs to get out from home sites (uit huis plaatsen).
 
+<img src="concept-images/concept1.jpg" width="600">
+I used the color green because I think it is a friendly color. It is not overwhelming because I did not use a vibrant green, but a very mellow green.
+
+<img src="concept-images/concept2.jpg" width="600">
+I made the layout simple by giving the dropdowns a lot of space around it.
+
+
 ## Process
 
-##### Monday october 8
+##### *Monday october 8*
 The first day of the project the client came to do a presentation about the organisation.
 We also get to know a little about the assignment we were about to get.
 
-In the afternoon we went to see the neighbourhood with all of the students.
+In the afternoon we went to see the neighbourhood with all of the students and get to know eachother a little more.
 
-##### Tuesday october 9
+##### *Tuesday october 9*
 Today there were three speakers who were telling about the three biggest frameworks: `React`, `Vue.js` and `Angular.js`.
 
-After the speakers were done explaining and promoting the frameworks we had to do some research these frameworks and other frameworks.
+After the speakers were done explaining and promoting the frameworks we had to do some research about these and other frameworks.
 
-We had a bootcamp from one of our teachers about the stuff we learned until now. It was a refrehment!
+We had a bootcamp from one of our teachers about the stuff we learned until now. It was a refreshment!
 
-At the end of the day we had to give the teacher a top three of frameworks we want to use.
+At the end of the day we had to give the teacher a top three of frameworks would like to use.
 1. Vue.js;
 2. React.js;
 3. Polymer.js
 
-##### Wednesday october 10
+##### *Wednesday october 10*
 Today we get to hear the framework we have to work with for two weeks.
-
-The client came by again to show more information and data we can use to make the assignment we got.
 
 I've got the framework `Polymer`.
 For the rest of the day I was researching the framework even more and following tutorials to understand the framework.
 
+The client came by again to show more information and data we can use to make the assignment we got.
+
 We also had a JavaScript bootcamp from one of the teachers.
 
-##### Thursday october 11
+###### `Polymer`
+Polymer is an open-source JavaScript library for building web applications using Web Components. The library is being developed by Google developers and contributors on GitHub. Modern design principles are implemented as a separate project using Google's Material Design design principles.
+
+Polymer is used by a number of Google services and websites, including the redesigned YouTube, YouTube Gaming, the redesigned Google Earth, Google I/O websites, Google Play Music, redesign of Google Sites and Allo for web.
+
+Other notable users include Netflix, Electronics Arts, ING, Coca-Cola, McDonald's, BBVA, IBM and General Electric.  
+(Source: https://en.wikipedia.org/wiki/Polymer_(library))
+
+##### *Thursday october 11*
 I was still researching the framework I got. It was hard to find a good documentation because not many people use the framework `Polymer`.
 Eventually we found a starter-kit.
 
 I worked together with other people who had to work with the framework `Polymer`. We really helped each other.
 
-##### Friday october 12
+##### *Friday october 12*
 Beginning to understand the framework a little bit more everytime. We found a tutorial to follow to understand the `selected` element in `Polymer`.
 
-I have watched a lot of tutorials on youtube and follow a couple of them.
+I have watched a lot of tutorials on youtube and followed a couple of them.
 
-##### Monday october 15
-Today the client came with on emergency worker who could be using the product we were making and there were two emergency workers that already use the existing app, but that does not function properly.
+##### *Monday october 15*
+Today the client came with one emergency worker (hulpverlener) who could be using the product we were making and there were two emergency workers (hulpverleners) that already use the existing app, but that does not function properly.
 
 It was very useful to hear what emergency workers want in tool they use at work.
 
 I followed a tutorial again. I do this to understand how the framework works.
 
-##### Tuesday october 16
+##### *Tuesday october 16*
 Made several pages and links to them. Added all the forms.
 
-##### Wednesday october 17
-There was a speaker today (Nienke Dekker). She talked about why to use a framework. (kijk in notitieboek voor aanvulling)
+Still not understanding the framework entirely, but I'm getting there.
+
+##### *Wednesday october 17*
+There was a speaker today (Nienke Dekker). She talked about why to use a framework.
+
+A framework is declarative: only describes the logic of your application. You don't have to tell how to do it, that is what the framework does for you.
+
+*Most important reasons to use a framework:*
+- Keep the UI en states insync;
+- You only have to worrry about the looks of the UI.
 
 Added localStorage to the app. Chelsea Dekker and Maikel van Veen helped me a lot with this code. I could not figure it out myself. With the help of Chelsea and Maikel I understand the code and how you save the code in you localStorage.
 
 Added a lot of styling and made components of the forms.
 
-##### Thursday october 18
+##### *Thursday october 18*
 Added the formula to get the percentage of the risk.
 With the help of Chelsea (and Maikel) I added the formula to the risico-app. Now the website calculates the risk while you select a value in a dropdown.
+
+##### *Friday october 19*
+The presentations.
+Before I had my presentation I still worked a lot on my app. I wasn't satisfied with the styling. I did not know what color to use.

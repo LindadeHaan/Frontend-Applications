@@ -209,9 +209,9 @@ class GeneralForm extends PolymerElement {
 
   }
 
-  //opzoeken!!!!
+  // Givs access to the shadowDOMtree
   ready() {
-    // super betekent dat er iets overschreven moet worden.
+    // super means you want to overwrite something from/in the shadow DOM tree
     super.ready()
 
     const selectNames = [

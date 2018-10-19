@@ -7,7 +7,7 @@
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
- 
+
 import '@polymer/polymer/polymer-element.js';
 
 const $_documentContainer = document.createElement('template');
@@ -18,24 +18,24 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         margin: 24px 40px;
         padding: 16px;
         color: #757575;
-        background-color: #afafaf;
+        background-color: #f2f0f0;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
       }
 
       h1 {
         margin: 16px 0;
-        color: #f7f7f7;
+        color: #000;
         font-size: 22px;
       }
 
       h4 {
-        color: #f7f7f7;
+        color: #000;
         font-size: 18px;
         margin-bottom: 10px;
       }
 
       p {
-        color: #f7f7f7;
+        color: #000;
         margin-top: 10px;
         font-family: "Open Sans";
       }
@@ -54,7 +54,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       }
 
       fieldset {
-        border-color: #088e2a;
+        border-color: #50d37d;
         border-right: none;
         border-bottom: none;
         border-top: none;
@@ -78,7 +78,7 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       /* DROPDOWN  */
       select {
         width: 40%;
-        border: solid 1px rgba(8, 142, 42, 0.4);
+        border: solid 1px rgba(80, 211, 125, 0.4);
         height: 35px;
         font-size: 14px;
         padding: 5px;
@@ -89,8 +89,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
       }
 
       select:hover {
-        background: rgba(8, 142, 42, 0.4);
-        border: solid 1px rgba(8, 142, 42, 0.4);
+        background: rgba(80, 211, 125, 0.4);
+        border: solid 1px rgba(80, 211, 125, 0.4);
         cursor: pointer;
       }
 
@@ -103,13 +103,13 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         height: 40px;
         font-size: 16px;
         font-family: "Exo", sans-serif;
-        background: rgba(8, 142, 42, 0.4);
-        border: solid 1px rgba(8, 142, 42, 0.4);
+        background: rgba(80, 211, 125, 0.4);
+        border: solid 1px rgba(80, 211, 125, 0.4);
         }
 
         button:hover {
-          background: rgb(8, 142, 42);
-          border: solid 1px rgb(8, 142, 42);
+          background: rgb(80, 211, 125);
+          border: solid 1px rgb(80, 211, 125);
           cursor: pointer;
         }
     </style>

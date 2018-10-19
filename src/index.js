@@ -106,13 +106,13 @@ class MyApp extends PolymerElement {
         }
 
         app-header {
-          color: #fff;
+          color: #000;
           /* background-color: var(--app-primary-color); */
-          background-color: #606060;
+          background-color: #fff;
         }
 
         app-header-layout {
-          background-color: #606060;
+          background-color: #fff;
         }
 
         app-header paper-icon-button {
@@ -135,7 +135,7 @@ class MyApp extends PolymerElement {
           color: black;
           font-weight: bold;
           width: auto;
-          background: rgba(14, 178, 56, 0.8);
+          background: rgba(130, 242, 130, 0.8);
         }
 
         .iron-selected {
@@ -143,7 +143,7 @@ class MyApp extends PolymerElement {
         }
 
         .drawer-list a:hover {
-          background: rgba(14, 178, 56, 0.8);
+          background: rgba(130, 242, 130, 0.8);
         }
 
         h1.risk {

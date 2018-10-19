@@ -87,6 +87,13 @@ Looking for our older PSK2 Polycast or migration blog post? See [the previous RE
 
 # README.md
 
+- [Install](#install-the-risico-app)
+- [Concept](#concept)
+- [Process](#process)
+- [Opinion](#opinion)
+- [Links I used](#links-i-used)
+- [License](#license)
+
 ### Install the risico-app
 To install the risico you have to follow a few steps:
 
@@ -134,13 +141,15 @@ I made the layout simple by giving the dropdowns a lot of space around it.
 
 ## Process
 
-##### *Monday october 8*
+### Week 1
+
+#### *Monday october 8*
 The first day of the project the client came to do a presentation about the organisation.
 We also get to know a little about the assignment we were about to get.
 
 In the afternoon we went to see the neighbourhood with all of the students and get to know eachother a little more.
 
-##### *Tuesday october 9*
+#### *Tuesday october 9*
 Today there were three speakers who were telling about the three biggest frameworks: `React`, `Vue.js` and `Angular.js`.
 
 After the speakers were done explaining and promoting the frameworks we had to do some research about these and other frameworks.
@@ -152,7 +161,7 @@ At the end of the day we had to give the teacher a top three of frameworks would
 2. React.js;
 3. Polymer.js
 
-##### *Wednesday october 10*
+#### *Wednesday october 10*
 Today we get to hear the framework we have to work with for two weeks.
 
 I've got the framework `Polymer`.
@@ -162,7 +171,7 @@ The client came by again to show more information and data we can use to make th
 
 We also had a JavaScript bootcamp from one of the teachers.
 
-###### `Polymer`
+##### `Polymer`
 Polymer is an open-source JavaScript library for building web applications using Web Components. The library is being developed by Google developers and contributors on GitHub. Modern design principles are implemented as a separate project using Google's Material Design design principles.
 
 Polymer is used by a number of Google services and websites, including the redesigned YouTube, YouTube Gaming, the redesigned Google Earth, Google I/O websites, Google Play Music, redesign of Google Sites and Allo for web.
@@ -170,7 +179,7 @@ Polymer is used by a number of Google services and websites, including the redes
 Other notable users include Netflix, Electronics Arts, ING, Coca-Cola, McDonald's, BBVA, IBM and General Electric.  
 (Source: https://en.wikipedia.org/wiki/Polymer_(library))
 
-##### *Thursday october 11*
+#### *Thursday october 11*
 I was still researching the framework I got. It was hard to find a good documentation because not many people use the framework `Polymer`.
 Eventually we found a starter-kit.
 
@@ -181,19 +190,21 @@ Beginning to understand the framework a little bit more everytime. We found a tu
 
 I have watched a lot of tutorials on youtube and followed a couple of them.
 
-##### *Monday october 15*
+### Week 2
+
+#### *Monday october 15*
 Today the client came with one emergency worker (hulpverlener) who could be using the product we were making and there were two emergency workers (hulpverleners) that already use the existing app, but that does not function properly.
 
 It was very useful to hear what emergency workers want in tool they use at work.
 
 I followed a tutorial again. I do this to understand how the framework works.
 
-##### *Tuesday october 16*
+#### *Tuesday october 16*
 Made several pages and links to them. Added all the forms.
 
 Still not understanding the framework entirely, but I'm getting there.
 
-##### *Wednesday october 17*
+#### *Wednesday october 17*
 There was a speaker today (Nienke Dekker). She talked about why to use a framework.
 
 A framework is declarative: only describes the logic of your application. You don't have to tell how to do it, that is what the framework does for you.
@@ -206,11 +217,40 @@ Added localStorage to the app. Chelsea Dekker and Maikel van Veen helped me a lo
 
 Added a lot of styling and made components of the forms.
 
-##### *Thursday october 18*
+#### *Thursday october 18*
 Added the formula to get the percentage of the risk.
 With the help of Chelsea (and Maikel) I added the formula to the risico-app. Now the website calculates the risk while you select a value in a dropdown.
 
-##### *Friday october 19*
+#### *Friday october 19*
 The presentations.
 Before I had my presentation I still worked a lot on my app. I wasn't satisfied with the styling. I did not know what color to use. Eventually I went with green because I think this is a friendly color.
 I prepared my pitch and practiced it.
+
+## My opinion
+At fist I was excited to be working with frameworks, because I've never done that before and of course I wanted to learn this. What the speakers, who told about three frameworks, said was very interesting to me. I was motivated to get to work and to do some research on frameworks.
+
+After we got assigned our framework we had to work with for two weeks I was still motivated to get to work. But after doing some deeper research and talking about it with the other students who had to work with Polymer, I soon found out that it was going to be hard.
+We were all thinking about switching frameworks, but then we would have less time to make something.
+
+Fist I wanted to understand what a `component` was, because I did not know this before I started working with this framework. Polymer is all about components.  
+Now I knwo what they are, I know they are very useful! You write code once, make it a component and then you can use it in multiple files without writing all the same code again.
+
+Something I did not do enough research for was: searching for a good documentation. Polymer does not have a great documentation on the site. It does have good tutorial though, but that was not enough to fully understand everything.
+That is why I was very happy that Maikel and Chelsea had the same framework. Especially Maikel figured out so much code. He explained much of it to Chelsea and she explained it to me. Otherwise I would've never got all the write code so everything would work.
+
+Would I recommend Polymer? I don't know. Because it is the only framework I worked with so far, so I don't have any experience with frameworks.
+But from what I heard from Maikel is that other frameworks are better to work with and probably easier to learn because of better documentation.
+
+## Links I used
+- https://www.polymer-project.org/3.0/start/
+- https://www.polymer-project.org/3.0/start/first-element/intro
+- https://github.com/Polymer/polymer-starter-kit
+- https://www.polymer-project.org/3.0/start/toolbox/add-elements
+
+#### Videos
+- https://www.youtube.com/watch?v=MaWcS-10NIw&list=PLLnpHn493BHHbOWwQxtGCVfEgWZxxofyA
+- https://www.youtube.com/watch?v=NqwSh31SHrA&list=PLvVKmViR0Z7bZj2XH_u-EolXGVoc1VwcT
+- https://www.youtube.com/watch?v=7CUO7PyD5zA
+
+## License
+MIT

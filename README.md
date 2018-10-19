@@ -94,7 +94,7 @@ Looking for our older PSK2 Polycast or migration blog post? See [the previous RE
 - [Links I used](#links-i-used)
 - [License](#license)
 
-### Install the risico-app
+## Install the risico-app
 To install the risico you have to follow a few steps:
 
 You need to change directory in your terminal first to the folder where you want to install everything. Use cd in your terminal to get to the place where you want to install on you computer.  

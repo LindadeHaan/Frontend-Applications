@@ -213,7 +213,7 @@ A framework is declarative: only describes the logic of your application. You do
 - Keep the UI en states insync;
 - You only have to worrry about the looks of the UI.
 
-Added localStorage to the app. Chelsea Dekker and Maikel van Veen helped me a lot with this code. I could not figure it out myself. With the help of Chelsea and Maikel I understand the code and how you save the code in you localStorage.
+Added localStorage to the app. Chelsea Doeleman and Maikel van Veen helped me a lot with this code. I could not figure it out myself. With the help of Chelsea and Maikel I understand the code and how you save the code in you localStorage.
 
 Added a lot of styling and made components of the forms.
 

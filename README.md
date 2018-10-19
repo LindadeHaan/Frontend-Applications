@@ -212,4 +212,5 @@ With the help of Chelsea (and Maikel) I added the formula to the risico-app. Now
 
 ##### *Friday october 19*
 The presentations.
-Before I had my presentation I still worked a lot on my app. I wasn't satisfied with the styling. I did not know what color to use.
+Before I had my presentation I still worked a lot on my app. I wasn't satisfied with the styling. I did not know what color to use. Eventually I went with green because I think this is a friendly color.
+I prepared my pitch and practiced it.

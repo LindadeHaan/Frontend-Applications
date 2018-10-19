@@ -14,6 +14,7 @@ export const calculateRisk = (values) => {
     // 0 is startvalue
     // Always starts counting at 0.
     // If you change 0 to another number your startValue is different.
+    // A loop that adds things to the last number
     .reduce((calculator, currentValue) => calculator + currentValue, 0)
 
   // Formula to calculate risk

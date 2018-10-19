@@ -90,7 +90,7 @@ Looking for our older PSK2 Polycast or migration blog post? See [the previous RE
 - [Install](#install-the-risico-app)
 - [Concept](#concept)
 - [Process](#process)
-- [Opinion](#opinion)
+- [My opinion](#my-opinion)
 - [Links I used](#links-i-used)
 - [License](#license)
 
